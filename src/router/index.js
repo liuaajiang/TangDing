@@ -4,7 +4,7 @@ import Index from '@/components/Index'
 import Register from '@/components/Register'
 import ForgetPass from '@/components/ForgetPass'
 import CompanyLogin from '@/components/CompanyLogin'
-
+import product from '@/components/product'
 
 Vue.use(Router)
 
@@ -29,6 +29,10 @@ export default new Router({
       path:'/CompanyLogin',
       name: 'CompanyLogin',
       component:CompanyLogin
+    },{
+      path:'/product',
+      name: 'product',
+      component:product
     }
   ]
 })

@@ -4,24 +4,30 @@
         <ul class="topLeft">
             <li >
                 <img src="@/assets/index/telephone.png" class="telephone"/>
-                <p>客服电话：400-819-9868</p>
+                <p class="kefu">客服电话：400-819-9868</p>
             </li>
             <li>
-            <el-popover
+            <!-- <el-popover
                 placement="top-start"
                 title="标题"
                 width="200"
                 trigger="hover"
                 content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
                 <el-button slot="reference">hover 激活</el-button>
-            </el-popover>
+            </el-popover> -->
+                <img src="@/assets/index/datang_icon.png" class="telephone"/>
+                <p class="load">大唐财富APP下载</p>
             </li>
-            <el-tooltip placement="top">
-                <div slot="content">多行信息<br/>
-                    <img src="@/assets/logo.png">
-                </div>
-                <el-button>Top center</el-button>
-            </el-tooltip>
+            <li>
+                 <img src="@/assets/index/weChat_icon.png" class="telephone"/>
+                <el-tooltip placement="top" class="service">
+                    <div slot="content">多行信息<br/>
+                        <img src="@/assets/logo.png">
+                     </div>
+                    <el-button>微信服务号</el-button>
+                </el-tooltip>
+            </li>
+           
         </ul>
         <ul class="topRight">
             <li >[个人登录]</li>{{user}}
@@ -63,6 +69,7 @@ ul
 .header
   width 100%
   overflow hidden
+  background-color #ffffff
   nav
     overflow hidden
     width 1200px
@@ -73,8 +80,7 @@ ul
           float left
           overflow hidden
           p
-            font-size 16px
-            color #3E3E3E
+            font-size 16px          
             float left
             line-height 20px
             margin-top 19px
@@ -83,6 +89,16 @@ ul
             width 20px
             height 20px
             margin 19px 10px 15px 0
+          .kefu
+            color #2A2A2A
+          .load
+            color #3E3E3E
+        .service          
+            padding 0
+            margin-top 23px
+            outline none 
+            border 0
+            color #3E3E3E
     .topRight
         float right
         li
