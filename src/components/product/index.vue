@@ -130,7 +130,7 @@ ul {
 .bannering
     width 100%
     background rgba(0,0,0,0.5)   
-    height 60px
+    min-height 70px
     position absolute
     top 40px
 .banner_top
@@ -140,11 +140,11 @@ ul {
     .banner_title  
       width 50%  
       float left
-      margin-top 5px
+      margin-top 8px
       img
         width 100%
     .navul
-      margin-top 2%
+      margin-top 2.4%
       font-weight normal
       overflow hidden     
       float right
@@ -160,10 +160,11 @@ ul {
 .product_content
     padding 70px 18.75% 23px 18.75%
     box-sizing border-box
-    background-image url("../../assets/index/product_content_bg.png")
-    background-repeat no-repeat
+    background-image url(../../assets/index/product_content_bg.png)  
+    background-attachment fixed
+    background-position center center
     background-size cover
-    background-color rgba(0,0,0,0.83)   
+    background-color rgba(0,0,0,0.83)      
     .content_left
         margin-bottom 88px
         position relative       

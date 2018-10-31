@@ -147,7 +147,7 @@ ul {
 .bannering
     width 100%
     background rgba(0,0,0,0.5)   
-    height 60px
+    min-height 70px
     position absolute
     top 40px
 .banner_top
@@ -157,11 +157,11 @@ ul {
     .banner_title  
       width 50%  
       float left
-      margin-top 5px
+      margin-top 8px
       img
         width 100%
     .navul
-      margin-top 2%
+      margin-top 2.4%
       font-weight normal
       overflow hidden     
       float right
@@ -177,8 +177,9 @@ ul {
 .about_content
     width 100%
     background-image url(../../assets/index/ours_bg.png)
-    background-repeat no-reoeat
-    background-size 100% 100%
+    background-attachment fixed
+    background-position center center
+    background-size cover
 .content_wrap
     width 62.5%
     margin 0 auto

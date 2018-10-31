@@ -594,7 +594,7 @@ transform: scale(2)
   background url(../../assets/index/home_banner1.png) no-repeat
   background-attachment fixed
   background-position center center
-  max-width 1920px
+  //max-width 1920px
   height 1048.5px
   margin 0 auto
 .operating_procedures
@@ -602,7 +602,7 @@ transform: scale(2)
   background-attachment fixed
   background-position center center
   background-size cover
-  max-width 1920px
+  //max-width 1920px
   height 490px
   margin 0 auto
 .wrap_bottom
@@ -610,7 +610,7 @@ transform: scale(2)
   background-attachment fixed
   background-position center center
   background-size cover
-  max-width 1920px
+  //max-width 1920px
   height 900px
   margin 0 auto
 
