@@ -17,10 +17,10 @@
             </el-popover> -->
                 <!-- <img src="@/assets/index/datang_icon.png" class="telephone"/>
                 <p class="load">大唐财富APP下载</p> -->
-                <img src="@/assets/index/datang_icon.png" class="telephone"/>
+                <img src="@/assets/index/datang_icon.png" class="telephone" />
                 <el-tooltip placement="top" class="service">
                     <div slot="content">
-                        <img src="@/assets/index/saoma1.png">
+                        <img src="@/assets/index/saoma1.png" style="width: 160px;">
                      </div>
                     <el-button>大唐财富APP下载</el-button>
                 </el-tooltip>
@@ -29,7 +29,7 @@
                  <img src="@/assets/index/weChat_icon.png" class="telephone"/>
                 <el-tooltip placement="top" class="service">
                     <div slot="content">
-                        <img src="@/assets/index/saoma2.png">
+                        <img src="@/assets/index/saoma2.png" style="width: 160px;">
                      </div>
                     <el-button>微信服务号</el-button>
                 </el-tooltip>
@@ -112,7 +112,7 @@ ul
         margin 0 10px        
 .header
   width 100%
-  height 54px
+  height 40px
   overflow hidden
   background-color #ffffff
   min-width 1200px
@@ -126,22 +126,22 @@ ul
           float left
           overflow hidden
           p
-            font-size 16px          
+            font-size 14px          
             float left
-            line-height 20px
-            margin-top 19px
+            line-height 18px
+            margin-top 12px
           img
             float left
-            width 20px
-            height 20px
-            margin 19px 10px 15px 0
+            width 14px
+            height 14px
+            margin 14px 6px 15px 0
           .kefu
             color #2A2A2A
           .load
             color #3E3E3E
         .service          
             padding 0
-            margin-top 23px
+            margin-top 14px
             outline none 
             border 0
             color #3E3E3E
@@ -149,10 +149,10 @@ ul
         float right
         li
           cursor pointer
-          font-size 16px
+          font-size 14px
           color #B09A7D
-          line-height 20px
-          margin-top 19px
+          line-height 18px
+          margin-top 12px
           .jump_tang
             color #2A2A2A
 .masking

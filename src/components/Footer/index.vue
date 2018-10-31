@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="footer_content">
-      <p class="hotline"><span style="margin-right:20px;">客服电话：400-819-9868</span><span>在线客服：(服务时间：08:30-17:30)</span></p>
+      <div class="hotline" style="overflow:hidden;font-size:14px;color:#fff;"><span style="margin-right:20px;float: left;">客服电话：400-819-9868</span><div style="float:left"><img src="@/assets/index/Customer service_img.png" style="width:18px;height:18px;float: left;padding-right: 5px;margin-top: -1px;display: block;"/><span>在线客服：(服务时间：08:30-17:30)</span></div></div>
       <p class="partner">合作伙伴</p>
       <p class="partner_english">Cooperative partner</p>
       <p class="partnered">
@@ -10,7 +10,7 @@
         <a href="http://www.zrfunds.com.cn/index.html" style="color:#ffffff;">中融基金</a>
         <a href="http://www.icbccs.com.cn/cif/signin.jsp" style="border:0;color:#ffffff;">工银基金</a>     
       </p>
-      <p>北京唐鼎耀华基金销售有限公司 版权所有 CopyRight C 2014.All Rights Reserved 京ICP备14008122号14008122号</p>
+      <p>北京唐鼎耀华基金销售有限公司 版权所有 CopyRight C 2014.All Rights Reserved 京ICP备14008122号</p>
       <div class="erweima">
         <div class="dtcf">
           <img src="@/assets/index/dtcf.png" alt="">
@@ -87,11 +87,11 @@ ul {
   position relative
   p
     color #ffffff
-    font-size 16px
+    font-size 14px
   .hotline
     margin-bottom 2%
   .partner
-   font-size 26px
+   font-size 24px
   .partner_english
     margin-bottom 5px
     color #616162
@@ -107,7 +107,7 @@ ul {
   .erweima
     width 30%
     position absolute
-    left 60%
+    left 61%
     top 21%
     overflow hidden
     div
@@ -118,10 +118,10 @@ ul {
     .dtcf  
       float left     
       img 
-        width 100%                  
+        width 98%                  
     .dtcf_service
       float right
       img 
-        width 100%                
+        width 98%                
   
 </style>
