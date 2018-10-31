@@ -31,7 +31,7 @@
                                 <div class="line"></div>
                             </div>
                         </li>
-                        <li class="caifu_lists" style="margin:0 5%;">
+                        <li class="caifu_lists" style="margin:0 4%;">
                             <img src="@/assets/index/banker2_img.png" alt="">
                             <div>
                                 <p class="img_title">私行财富师</p>
@@ -51,6 +51,7 @@
             <div class="assign_caifu">
                 <div class="assign_wrap">
                      <p class="caifu_text">指定财富师操作流程</p>
+                     <p class="caifu_english">OPERATING PROCESS</p>
                      <!-- <ul class="assign_list">
                          <li class="assign_lists">skjdflfdkl</li>
                          <li class="assign_lists" style="margin:0 2%">dflkdlf</li>
@@ -66,17 +67,17 @@
                     <p class="content_text">唐鼎耀华从体验出发，成功构建全周期、全触点、全流程的三全客户服务体系，为客户精心打造、定期举办了大唐盛宴、唐耀高尔夫等高端尊享活动，为每一位客户献上专属于您的美妙之旅。</p>
                     <ul class="caifu_list">
                         <li class="caifu_lists activity">
-                            <img src="@/assets/index/yanhui.png" alt="">
+                            <img src="@/assets/index/yanhui.png" class="img_a" alt="">
                             <p class="lists_title">大唐盛宴<br/><span class="title2">品味大唐盛宴，尊享财富人生</span></p>                             
                             <p class="lists_detail">“大唐盛宴”是由唐鼎耀华主办，为客户提供的高端尊享活动。“春生、夏长、秋收、冬藏”中华文化对于文化、财富、美食都有着独到且完整的理论系统，“大唐盛宴”汲取传统文化之精粹与现代服务理念相融合，将文化、财富、美食三者熔冶一炉、合而为一，以高品质、高规格为价值准则，为每一位客户献上专属于您的美妙之旅。</p>                          
                         </li>
-                        <li class="caifu_lists activity" style="margin:0 5%;">
-                            <img src="@/assets/index/golf.png" alt="">   
+                        <li class="caifu_lists activity" style="margin:0 4%;">
+                            <img src="@/assets/index/golf.png" class="img_a" alt="">   
                             <p class="lists_title">唐耀高尔夫<br/><span class="title2">高尔夫全球巡回赛</span></p>                             
                             <p class="lists_detail" style="top:25%">唐耀高尔夫俱乐部是唐鼎耀华为投资者精心打造的运动类服务平台，致力于为会员客户搭建一个高端健康的运动娱乐平台，为客户提供高品质赛事服务，同时为客户带来深层次、全方位、私人专属的全球资产配置服务。</p>                          
                         </li>
                         <li class="caifu_lists activity">
-                            <img src="@/assets/index/post.png" alt="">   
+                            <img src="@/assets/index/post.png" class="img_a" alt="">   
                             <p class="lists_title">投后考察活动<br/><span class="title2">专业化、系统化、创新体验化</span></p>                             
                             <p class="lists_detail" style="top:10%">投后反哺投前，检验投资逻辑，专业化、系统化、创新体验化的投后管理体系。通过做实风险控制、做好增值服务，将监督、管理与服务三者有机结合，为合格投资者筛选优秀的产品，严格把关所投标的，做好投后服务工作。唐鼎耀华从体验出发，成功构建全周期、全触点、全流程的三全客户服务体系，给合格投资者带来“看得见”、“可体验”的投资服务。</p>                                          
                         </li>
@@ -182,11 +183,13 @@ export default {
     // },
     changeCai (){
       $(".caifu_lists").hover(function(){
-          $(this).find(".lists_title").hide();
-           $(this).find(".lists_detail").show();
+          $(this).find(".lists_title").fadeOut();
+           $(this).find(".lists_detail").fadeIn();
+           $(this).find(".img_a").css({opacity:0.6})
       },function(){
-          $(this).find(".lists_title").show();
-           $(this).find(".lists_detail").hide();
+          $(this).find(".lists_title").fadeIn();
+           $(this).find(".lists_detail").fadeOut();
+           $(this).find(".img_a").css({opacity:1})
       })
     },
      
@@ -261,6 +264,8 @@ ul {
     background-image url(/static/img/ours_bg.383b337.png)
     background-repeat no-reoeat
     background-size 100% 100%
+    background-attachment fixed
+    background-position center center
     .caifu 
         width 62.5%
         margin 0 auto
@@ -268,17 +273,20 @@ ul {
             padding-top 67px
             padding-bottom 60px
             .caifu_text
-                margin-bottom 5px
-                font-size 30px
+                margin-bottom 10px
+                font-size 40px
+                font-weight 600
                 color #ffffff
             .caifu_english
                 margin-bottom 37px
                 font-size 28px
                 color #ffffff
+                opacity 0.8
+                font-weight 600
             .content_text
-                font-size 18px
+                font-size 16px
                 color #ffffff
-                line-height 1.5
+                line-height 2
                 margin-bottom 40px
 .caifu_list
   overflow hidden
@@ -307,10 +315,16 @@ ul {
         padding-top 55px
         padding-bottom 60px
         .caifu_text
-            margin-bottom 44px
-            font-size 30px
+                margin-bottom 10px
+                font-size 40px
+                font-weight 600
+                color #ffffff
+        .caifu_english
+            margin-bottom 37px
+            font-size 28px
             color #ffffff
-            font-weight bold
+            opacity 0.8
+            font-weight 600
         .assign_list
             overflow hidden
             .assign_lists
@@ -322,7 +336,8 @@ ul {
     position relative
 .lists_title
     width 100%
-    font-size 28px
+    font-size 24px
+    line-height 30px
     color #ffffff
     font-weight bold
     text-align center
@@ -330,27 +345,27 @@ ul {
     top 40%
     left 0
     .title2
-        font-size 20px
+        font-size 16px
         font-weight normal
 .lists_detail
     display none
     width 100%
     padding 0 4%
     box-sizing border-box
-    font-size 16px
+    font-size 14px
     color #ffffff
     text-align center
-    line-height 1.5
+    line-height 1.8
     position absolute
     top 15%
-    left 0   
+    left 0  
 .advantage_list
         display flex
         .advantage_lists
            flex 1
            .lists_bg
                 width 40%
-                margin 0 auto 32px                
+                margin 0 auto 22px                
                 img 
                     width 100%
                     height 100%
@@ -359,31 +374,32 @@ ul {
                 font-size 18px  
             .lists_title_infor
                 margin-bottom 12px
-                font-size 30px
+                font-size 20px
                 color #ffffff
                 text-align center  
             .lists_text_infor
                 padding 0 8%
                 box-sizing border-box
-                font-size 22px
+                font-size 16px
                 color #C6C6C6                
                 line-height 1.5
 .basic_lists
     width 100%
-    height 180px
+    height 160px
     margin-bottom 24px
-    padding 20px 40px 0 32px
+    padding 26px 40px 0 29px
     box-sizing border-box
     background-color rgba(37, 36, 42, 0.79)
     .basic_lists_title 
-        margin-bottom 22px
+        margin-bottom 18px
         border-left 1px solid #B18C68
         padding-left 22px
         box-sizing border-box
-        font-size 25px
+        font-size 22px
         color #B18C68
+        font-weight 600
     .basic_lists_text
-        font-sieze 18px
+        font-size 16px
         color #C9C9C9
-        line-height 1.5
+        line-height 2
 </style>
