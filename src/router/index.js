@@ -5,7 +5,8 @@ import Register from '@/components/Register'
 import ForgetPass from '@/components/ForgetPass'
 import CompanyLogin from '@/components/CompanyLogin'
 import product from '@/components/product'
-
+import sever from '@/components/sever'
+import ours from '@/components/ours'
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +34,14 @@ export default new Router({
       path:'/product',
       name: 'product',
       component:product
+    },{
+      path:'/sever',
+      name: 'sever',
+      component:sever
+    },{
+      path:'/ours',
+      name: 'ours',
+      component:ours
     }
   ]
 })

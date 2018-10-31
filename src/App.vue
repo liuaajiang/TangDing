@@ -10,13 +10,13 @@
 <script>
 import Vue from 'vue'
 import Header from '@/components/Header'
-import Navheader from '@/components/Navheader'
+// import Navheader from '@/components/Navheader'
 import Footer from '@/components/Footer'
 export default {
   name: 'App',
   components: {
     Header,
-    Navheader,
+    // Navheader,
     Footer
   }
 }
@@ -27,7 +27,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(assets/index/bg_img01.png) no-repeat center;
+  /* background: url(assets/index/bg_img01.png) no-repeat center; */
 
 }
 a{

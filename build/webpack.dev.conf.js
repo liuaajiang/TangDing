@@ -92,4 +92,10 @@ module.exports = new Promise((resolve, reject) => {
       resolve(devWebpackConfig)
     }
   })
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin('common.js'),
+    new webpack.ProvidePlugin({
+    jQuery: "jquery",
+    $: "jquery"
+})]
 })
