@@ -160,10 +160,9 @@ ul {
 .product_content
     padding 70px 18.75% 23px 18.75%
     box-sizing border-box
-    background-image url("../../assets/index/product_content_bg.png")
+    background-image url("../../assets/index/producting_bg.png")
     background-repeat no-repeat
-    background-size cover
-    background-color rgba(0,0,0,0.83)   
+    background-size cover  
     .content_left
         margin-bottom 88px
         position relative       

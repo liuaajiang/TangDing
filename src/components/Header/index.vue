@@ -38,7 +38,7 @@
         </ul>
         <ul class="topRight">
             <li class="logining">[个人登录]</li>{{user}}
-            <router-link tag="li" to="/CompanyLogin">
+            <router-link tag="li" to="" class="jinrong">
                     [企业登录]
             </router-link>
             <li>
@@ -80,7 +80,9 @@ export default {
     },
      mounted () {
         this.loginShow()
-        this.closing()          
+        this.closing() 
+        this.jinRong()
+
     },
     methods: {
          loginShow(){
@@ -94,7 +96,12 @@ export default {
                 $(".geren_wrap").hide();
                 $(".masking").hide();
             })
-        }
+        },
+        jinRong(){
+            $(".jinrong").on('click',function(){
+                window.location.href="https://jg.tdyhfund.com/";
+            })
+        },
        
     }
 }

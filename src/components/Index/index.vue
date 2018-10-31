@@ -2,7 +2,7 @@
   <div class="index">
     <!-- <h1>{{ msg }}</h1> -->
     <div class="banner">
-        <img class="banner_img" src="@/assets/index/banner1.jpg" alt="" >          
+        <img class="banner_img" src="@/assets/index/banner1.png" alt="" >          
       </div>
        <div class="bannering">                
                 <div class="banner_top">

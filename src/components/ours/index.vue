@@ -67,7 +67,7 @@
                 <div class="contact_content">
                     <p class="contact_text">联系我们</p>
                     <p class="contact_english">CONTACT US</p>
-                    <p class="mobile">电话：400 819 9868（全国统一客户服务电话）</p>
+                    <p class="mobile">电话：400-819-9868（全国统一客户服务电话）</p>
                     <p class="mobile">传真：010-8593 2880（全国统一传真）</p>
                     <p class="mobile">电子邮箱：vip@tdyhfund.com</p>
                     <p class="mobile">总公司地址：北京市朝阳区建国门外大街19号A座1504/1505室　邮编：100020</p>

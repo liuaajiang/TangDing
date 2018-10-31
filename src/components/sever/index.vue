@@ -12,7 +12,7 @@
                         <router-link tag="li" to="/index">首页</router-link>
                         <router-link tag="li" to="/product">产品</router-link>
                         <router-link tag="li" to="/sever">服务</router-link>
-                        <router-link tag="li" to="/register">企业金融</router-link>
+                        <router-link tag="li" to="" class="enter_jin">企业金融</router-link>
                         <router-link tag="li" to="/ours">关于我们</router-link>
                     </ul> 
                 </div>
@@ -89,7 +89,7 @@
                     <div class="caifu_content">
                         <p class="caifu_text" style="color:#B09A7D;">信息服务</p>
                         <p class="caifu_english" style="color:#B09A7D;">INFORMATION SERVICE</p>
-                        <p class="content_text" style="color:#DBDBDB;">北京唐鼎耀华基金销售有限公司提供各类丰富、多样的投资、理财及资讯服务，投资者可下载大唐财富APP【下载】或关注大唐财富服务号【关注】进行查阅。</p>
+                        <p class="content_text" style="color:#DBDBDB;">北京唐鼎耀华基金销售有限公司提供各类丰富、多样的投资、理财及资讯服务，投资者可下载大唐财富APP或关注大唐财富公众号进行查阅。</p>
                         <ul class="advantage_list">
                             <li class="advantage_lists">
                                 <div class="lists_bg"><img src="@/assets/index/service_img1.png" alt=""></div>
@@ -119,7 +119,7 @@
                         <ul class="service_basic_list">
                             <li class="basic_lists">
                                 <p class="basic_lists_title">交易服务</p>
-                                <p class="basic_lists_text">唐鼎耀华为您提供种类丰富、不同风险等级的产品的一站式交易服务平台，您可全程通过线上平台进行认申购、赎回、转换、定期投资、修改分红方式等基金交易操作，也可通过线下转账等方式来支付投资资金。</p>
+                                <p class="basic_lists_text">唐鼎耀华是为您提供种类丰富、不同风险等级的产品的一站式交易服务平台，您可全程通过线上平台进行认申购、赎回、转换、定期投资、修改分红方式等基金交易操作，也可通过线下转账等方式来支付投资资金。</p>
                             </li>
                             <li class="basic_lists">
                                 <p class="basic_lists_title">消息提醒服务</p>
@@ -162,7 +162,8 @@ export default {
   },
   mounted () {
     //this.needScroll()
-    this.changeCai()       
+    this.changeCai() 
+    this.enterJin()      
   },
   methods: {
     // needScroll () {
@@ -192,7 +193,11 @@ export default {
            $(this).find(".img_a").css({opacity:1})
       })
     },
-     
+    enterJin (){
+      $(".enter_jin").on('click',function(){
+           window.location.href="https://jg.tdyhfund.com/";
+      })
+    }
       
     // goTop () {
     //   let self = this
@@ -258,15 +263,16 @@ ul {
        box-sizing border-box  
        text-align center 
        color #ffffff
+       cursor pointer;
      li:hover
         border-bottom 2px solid #B09A7D
 .server_content
     width 100%
-    background-image url(/static/img/ours_bg.383b337.png)
-    background-repeat no-reoeat
-    background-size 100% 100%
+    background-image url(../../assets/index/server_bg.png) 
     background-attachment fixed
-    background-position center center
+    background-size cover
+    background-position center center  
+    margin 0 auto
     .caifu 
         width 62.5%
         margin 0 auto
