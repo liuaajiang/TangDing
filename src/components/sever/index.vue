@@ -160,26 +160,26 @@ export default {
     }
   },
   mounted () {
-    this.needScroll()
+    //this.needScroll()
     this.changeCai()       
   },
   methods: {
-    needScroll () {
-      let clientHeight = document.documentElement.clientHeight
-      let obtn = this.$refs.btn
-      window.onscroll = function () {
-        let osTop = document.documentElement.scrollTop || document.body.scrollTop
-        if (osTop >= clientHeight) {
-          obtn.style.display = 'block'
-        } else {
-          obtn.style.display = 'none'
-        }
-        if (!this.isTop) {
-          clearInterval(this.timer)
-        }
-        this.isTop = false
-      }
-    },
+    // needScroll () {
+    //   let clientHeight = document.documentElement.clientHeight
+    //   let obtn = this.$refs.btn
+    //   window.onscroll = function () {
+    //     let osTop = document.documentElement.scrollTop || document.body.scrollTop
+    //     if (osTop >= clientHeight) {
+    //       obtn.style.display = 'block'
+    //     } else {
+    //       obtn.style.display = 'none'
+    //     }
+    //     if (!this.isTop) {
+    //       clearInterval(this.timer)
+    //     }
+    //     this.isTop = false
+    //   }
+    // },
     changeCai (){
       $(".caifu_lists").hover(function(){
           $(this).find(".lists_title").hide();
@@ -191,18 +191,18 @@ export default {
     },
      
       
-    goTop () {
-      let self = this
-      self.timer = setInterval(function () {
-        let osTop = document.documentElement.scrollTop || document.body.scrollTop
-        let ispeed = Math.floor(-osTop / 5)
-        document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed
-        self.isTop = true
-        if (osTop === 0) {
-          clearInterval(self.timer)
-        }
-      }, 30)
-    }
+    // goTop () {
+    //   let self = this
+    //   self.timer = setInterval(function () {
+    //     let osTop = document.documentElement.scrollTop || document.body.scrollTop
+    //     let ispeed = Math.floor(-osTop / 5)
+    //     document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed
+    //     self.isTop = true
+    //     if (osTop === 0) {
+    //       clearInterval(self.timer)
+    //     }
+    //   }, 30)
+    // }
   }
 }
 </script>
@@ -235,8 +235,8 @@ ul {
     background rgba(0,0,0,0.5)   
     height 100px
     position absolute
-    top 54px
-.banner_top
+    top 40px
+   .banner_top
     width 62.5% 
     margin 0 auto
     overflow hidden

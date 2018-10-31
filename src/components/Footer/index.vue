@@ -1,14 +1,14 @@
 <template>
   <div class="footer">
     <div class="footer_content">
-      <div class="hotline" style="overflow:hidden;font-size:14px;color:#fff;"><span style="margin-right:20px;float: left;">客服电话：400-819-9868</span><div style="float:left"><img src="@/assets/index/Customer_service_img.png" style="width:18px;height:18px;float: left;padding-right: 5px;margin-top: -1px;display: block;"/><span>在线客服：(服务时间：08:30-17:30)</span></div></div>
+      <div class="hotline" style="overflow:hidden;font-size:14px;color:#fff;"><span style="margin-right:20px;float: left;font-size:16px;">客服电话：400-819-9868</span><div style="float:left"><img src="@/assets/index/Customer_service_img.png" style="width:20px;height:20px;float: left;padding-right: 6px;margin-top: -1px;display: block;"/><span><span style="font-size:16px;">在线客服</span>（服务时间：工作日08:30-17:30）</span></div></div>
       <p class="partner">合作伙伴</p>
       <p class="partner_english">Cooperative partner</p>
       <p class="partnered">
-        <a href="http://www.zzcapital.com/" style="color:#ffffff;">中植资本</a>
-        <a href="http://www.cmbc.com.cn/" style="color:#ffffff;">民生银行</a>
-        <a href="http://www.zrfunds.com.cn/index.html" style="color:#ffffff;">中融基金</a>
-        <a href="http://www.icbccs.com.cn/cif/signin.jsp" style="border:0;color:#ffffff;">工银基金</a>     
+        <a href="http://www.zzcapital.com/" style="color:#ffffff;" target="_blank">中植资本</a>
+        <a href="http://www.cmbc.com.cn/" style="color:#ffffff;" target="_blank">民生银行</a>
+        <a href="http://www.zrfunds.com.cn/index.html" style="color:#ffffff;" target="_blank">中融基金</a>
+        <a href="http://www.icbccs.com.cn/cif/signin.jsp" style="border:0;color:#ffffff;" target="_blank">工银基金</a>     
       </p>
       <p>北京唐鼎耀华基金销售有限公司 版权所有 CopyRight C 2014.All Rights Reserved 京ICP备14008122号</p>
       <div class="erweima">
@@ -107,7 +107,7 @@ ul {
   .erweima
     width 30%
     position absolute
-    left 61%
+    right 0
     top 21%
     overflow hidden
     div

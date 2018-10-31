@@ -19,7 +19,7 @@
                     </ul> 
                 </div>
         </div>
-    <div class="messageList" >
+    <!-- <div class="messageList" >
       <el-row type="flex" class="row-bg" justify="center">
         <el-col :span="3"><div class="grid-content bg-purple">最新消息：</div></el-col>
         <el-col :span="20">
@@ -32,7 +32,7 @@
           </div></el-col>
         <el-col :span="3"><div class="grid-content bg-purple more">查看更多</div></el-col>
       </el-row>    
-    </div>
+    </div> -->
     <div class="companyProfile">    
       <div class="tang_introduce">
          <p class="introduce_title">唐鼎耀华</p>
@@ -60,9 +60,8 @@
         <div class="tang_introduce">
           <p class="introduce_title">特色产品</p>
           <p class="english_text">PRODUCTS</p>
-          <p class="introduce_content">北京唐鼎耀华基金销售有限公司，是证监会批准从事基金销售业务的的持牌基金销售机构。公司在充分了解基金公司、券商的投研能力和投资管理能力的基础上，通过三级风控体系筛选出种类丰富、风险等级齐全的产品，供不同风险偏好的投资人一站式购买。公司专注为客户提供专业金融产品及服务，全品类的资产配置助您的财富稳健增值。</p>
         </div>
-        <ul class="featured_list">
+        <ul class="featured_list clearfloat">
           <li class="featured_lists">
             <div class="lists_img"><img src="@/assets/index/product_one_img.png" alt=""></div>
             <p class="featured_title1">元山母基金系列</p>
@@ -88,9 +87,9 @@
       <div class="operating_procedures">
         <p class="operating_text">操作流程</p>
         <p class="operating_english">OPERATING PROCESS</p>
-        <div class="operating_bottom">
+        <div class="operating_bottom clearfloat">
           <ul class="operating_change">
-            <li class="operating_change_lists"><span class="order">01</span><span class="order_text">下载app</span></li>
+            <li class="operating_change_lists"><span class="order">01</span><span class="order_text">下载APP</span></li>
             <li class="operating_change_lists"><span class="order">02</span><span class="order_text">人脸实名认证</span></li>
             <li class="operating_change_lists"><span class="order">03</span><span class="order_text">绑卡交易</span></li>
             <li class="operating_change_lists"><span class="order">04</span><span class="order_text">指定财富师</span></li>
@@ -326,7 +325,7 @@ transform: scale(2)
 .bannering
     width 100%
     background rgba(0,0,0,0.5)   
-    height 60px
+    min-height 70px
     position absolute
     top 40px
 .banner_top
@@ -336,11 +335,11 @@ transform: scale(2)
     .banner_title  
       width 50%  
       float left
-      margin-top 5px
+      margin-top 8px
       img
         width 100%
     .navul
-      margin-top 2%
+      margin-top 2.4%
       font-weight normal
       overflow hidden     
       float right
@@ -459,11 +458,11 @@ transform: scale(2)
     background-size 50% 90%;
     background-position-x 70%;
 .featured_list
-  overflow hidden
+  /* overflow hidden */
 .featured_lists
   float left
   width 32%
-  height 390px
+  /* height 390px */
   background-color #ffffff
   padding 1%
   box-sizing border-box
@@ -501,7 +500,7 @@ transform: scale(2)
   .operating_text
     margin-bottom 10px
     font-size 40px
-    color #dbb481  
+    color rgba(176,154,125,0.7) 
     font-weight bold 
   .operating_english
     margin-bottom 15px
@@ -511,7 +510,7 @@ transform: scale(2)
 .operating_change
   float left
   width 15%
-  margin-top 9%
+  margin-top 7%
   font-size 16px
   color #ffffff
   li
@@ -526,15 +525,16 @@ transform: scale(2)
 .operating_change_content
   float left
   width 85%
+  height 355px
   position relative
   .one_bg
     position absolute
-    float left
-    width 100%
+    float right
+    width 720px
   .one_bgs
     top 50px
 .banking
-  padding 45px 18.75% 0 18.75%
+  padding 45px 18.25% 0 18.25%
   box-sizing border-box
 .caifu_list
   overflow hidden
@@ -596,7 +596,8 @@ transform: scale(2)
   background-attachment fixed
   background-position center center
   max-width 1920px
-  height 1123.5px
+  height 1048.5px
+  margin 0 auto
 .operating_procedures
   background url(../../assets/index/move_bg2.png) no-repeat
   background-attachment fixed
@@ -604,12 +605,14 @@ transform: scale(2)
   background-size cover
   max-width 1920px
   height 490px
+  margin 0 auto
 .wrap_bottom
   background url(../../assets/index/move_bg3.png) no-repeat
   background-attachment fixed
   background-position center center
   background-size cover
   max-width 1920px
-  height 787px
+  height 900px
+  margin 0 auto
 
 </style>
