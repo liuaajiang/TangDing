@@ -13,7 +13,8 @@
                         <router-link tag="li" to="/index" class="navul_list">首页</router-link>
                         <router-link tag="li" to="/product" class="navul_list">产品</router-link>
                         <router-link tag="li" to="/sever" class="navul_list">服务</router-link>
-                        <router-link tag="li" to="/register" class="navul_list">企业金融</router-link>
+                        <router-link tag="li" to="" class="navul_list jinrong">企业金融</router-link>
+                        <!-- <li class="navul_list"><a href="https://jg.tdyhfund.com/" style="color:#ffffff">企业金融</a></li> -->
                         <router-link tag="li" to="/ours" class="navul_list">关于我们</router-link>
                     </ul> 
                 </div>
@@ -66,11 +67,11 @@
             <div class="lists_img"><img src="@/assets/index/product_one_img.png" alt=""></div>
             <p class="featured_title1">元山母基金系列</p>
             <p class="featured_title2">他山之石，聚力元山</p>
-            <p class="featured_content">作为市场首只投资不良资产的母基金，元山抓住市场先机，利用团队的专业优势，用直投的眼光做母基金，通过全面配置、优中选优的策略，迅速在行业和高净值客户层面第一时间打开市场，树立口碑，建立品牌。</p>
+            <p class="featured_content">作为市场首只投资不良资产的母基金，元山母基金抓住市场先机，利用团队的专业优势，用直投的眼光做母基金，通过全面配置、优中选优的策略，迅速在行业和高净值客户层面第一时间打开市场，树立口碑，建立品牌。</p>
           </li>
           <li class="featured_lists yuanyi">
             <div class="lists_img"><img src="@/assets/index/product_two_img.png" alt=""></div>
-            <p class="featured_title1">元山母基金系列</p>
+            <p class="featured_title1">元一母基金系列</p>
             <p class="featured_title2">股权投资，分享红利</p>
             <p class="featured_content">自建“元一300”五维画像大数据系统，对超过1000家有退出业绩的股权投资团队进行专业筛选。投资团队长期深耕国内投资圈，能快速布局市场里的隐形冠军和新锐黑马，目前通过1期和2期母基金已经投资了市场里9支最顶级的基金。</p>
           </li>
@@ -83,7 +84,7 @@
         </ul>
       </div>
     </div>
-    <div class="wrap_bottom">
+    
       <div class="operating_procedures">
         <p class="operating_text">操作流程</p>
         <p class="operating_english">OPERATING PROCESS</p>
@@ -94,19 +95,21 @@
             <li class="operating_change_lists"><span class="order">03</span><span class="order_text">绑卡交易</span></li>
             <li class="operating_change_lists"><span class="order">04</span><span class="order_text">指定财富师</span></li>
           </ul>
-          <div class="operating_change_content">
-              <div class="one_bg"><img src="@/assets/index/change_content_bg.png" alt=""></div>
+          <div class="operating_change_content clearfloat">
+              <div class="one_bg"><img src="@/assets/index/change_content_bg.png" alt="" style="margin-top:1%;"></div>
               <div class="one_bg" style="display:none;"><img src="@/assets/index/renlian.png" alt=""></div>
               <div class="one_bg" style="display:none;"><img src="@/assets/index/bangka.png" alt=""></div>
-              <div class="one_bg" style="display:none;"><img src="@/assets/index/zhiding.png" alt=""></div>                             
+              <div class="one_bg" style="display:none;"><img src="@/assets/index/zhiding.png" alt=""></div>   
+              <div style="clear:both;"></div>                          
           </div>  
         </div> 
       </div>
+      <div class="wrap_bottom">
       <div class="banking">
         <div class="tang_introduce">
-            <p class="introduce_title">特色产品</p>
-            <p class="english_text">PRODUCTS</p>
-            <p class="introduce_content">北京唐鼎耀华基金销售有限公司，是证监会批准从事基金销售业务的的持牌基金销售机构。公司在充分了解基金公司、券商的投研能力和投资管理能力的基础上，通过三级风控体系筛选出种类丰富、风险等级齐全的产品，供不同风险偏好的投资人一站式购买。公司专注为客户提供专业金融产品及服务，全品类的资产配置助您的财富稳健增值。</p>
+            <p class="introduce_title">财富师</p>
+            <p class="english_text">TANG PRIVATE BANKER</p>
+            <p class="introduce_content">唐鼎耀华拥有专业的投研和服务团队，公司股东和管理人员均拥有10年以上金融行业从业经验和多年财富管理经验，更有优秀财富师为您提供一对一的投资咨询、交易支持、投后服务，全程为您提供专业支持。</p>
         </div>
         <ul class="caifu_list">
             <li class="caifu_lists">
@@ -135,7 +138,7 @@
         <div class="license">
           <p class="introduce_title">公司资质</p>
           <p class="english_text">LICENSE PLATE</p>
-          <ul class="license_list">            
+          <ul class="license_list clearfloat">            
             
             <li class="license_lists xuke">
               <img src="@/assets/index/plate1_img.png" alt="">
@@ -204,7 +207,8 @@ export default {
     this.needScroll()
     this.changeTable()
     this.changeOperation()
-    this.changeLicens()    
+    this.jinRong()
+    //this.changeLicens()    
   },
   methods: {
     needScroll () {
@@ -223,29 +227,37 @@ export default {
         this.isTop = false
       }
     },    
+    jinRong(){
+      $(".jinrong").on('click',function(){
+          window.location.href="https://jg.tdyhfund.com/";
+      })
+      
+    },
      changeTable (){     
-        $(".caifu_lists").hover(function(){          
+        $(".caifu_lists").hover(function(){   
+          $(this).find("p").css("color","#B09A7D");                 
           $(this).find(".line").css("background-color","#B09A7D");
         },function(){
+            $(this).find("p").css("color","#2a2a2a");  
             $(this).find(".line").css("background-color","#c9c9c9");
         });      
      },
      changeOperation (){
        $(".operating_change_lists").hover(function(){     
-          $(this).find(".order_text").css({"border-bottom":"2px solid #CEAA7B"},{"color":"#CEAA7B"});
-          $(".one_bg").eq($(this).index()).show().siblings().show();
+          $(this).find(".order_text").css({"border-bottom":"2px solid #CEAA7B","color":"#CEAA7B"});
+          $(".one_bg").eq($(this).index()).fadeIn().siblings().fadeOut();
        },function(){
-          $(this).find(".order_text").css({"border-bottom":"0"},{"color":"#ffffff"});
+          $(this).find(".order_text").css({"border-bottom":"0","color":"#ffffff"});
        });
      },
-      xuke(){
-          $(".xuke").mouseenter(function(){
-            $(this).children("img").animate({width:"200%",height:"200%",marginTop:"-50%",marginLeft:"-50%"})   
-        }).mouseleave(function(){
-            $(this).children("img").animate({width:"100%",height:"100%",marginTop:0,marginLeft:0}) 
-        })
+      // xuke(){
+      //     $(".xuke").mouseenter(function(){
+      //       $(this).children("img").animate({width:"200%",height:"200%",marginTop:"-50%",marginLeft:"-50%"})   
+      //   }).mouseleave(function(){
+      //       $(this).children("img").animate({width:"100%",height:"100%",marginTop:0,marginLeft:0}) 
+      //   })
 
-      },
+      // },
     //   changeLicens (){
     //    $(".license_lists").hover(function(){   
     //       $(this).css("color","#B09A7D")  
@@ -289,6 +301,17 @@ ul {
   list-style-type: none;
   padding: 0;
 }
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.one_bg img{
+width:100%;
+}
+.license_lists img{
+z-index:9999;
+transition: all .5s ease;
+} 
+.license_lists:hover img{
+transform: scale(2)
+} 
 .index
   width 100%
   overflow hidden
@@ -303,15 +326,19 @@ ul {
 .bannering
     width 100%
     background rgba(0,0,0,0.5)   
-    height 100px
+    height 60px
     position absolute
-    top 54px
+    top 40px
 .banner_top
-    padding 25px 18.75% 23px 18.75%
+    padding 5px 18.75% 0 18.75%
     box-sizing border-box
     overflow hidden
-    .banner_title    
+    .banner_title  
+      width 50%  
       float left
+      margin-top 5px
+      img
+        width 100%
     .navul
       margin-top 2%
       font-weight normal
@@ -323,13 +350,14 @@ ul {
       box-sizing border-box  
       text-align center 
       color #ffffff
+      cursor pointer
      li:hover
         border-bottom 2px solid #B09A7D
 .messageList    
   background-color #B09A7D
   color #230A01
-  font-size 16px
-  padding 18px 0
+  font-size 15px
+  padding 10px 0
   .row-bg
     width 62.5%
     margin 0 auto
@@ -372,24 +400,26 @@ ul {
   z-index:9999;
 }
 .companyProfile
-  padding 25px 18.75% 23px 18.75%
+  padding 45px 18.75% 23px 18.75%
   box-sizing border-box
 .tang_introduce
   margin-bottom 20px
 .introduce_title
-  font-size 30px 
+  margin-bottom 10px
+  font-size 40px 
   color #383838
   font-weight bold
 .english_text
   color rgba(56,56,56,0.8)
   font-size 28px
-  margin-bottom 20px
+  margin-bottom 15px
+  font-weight bold
 .introduce_content
-  font-size 18px
+  font-size 16px
   color #383838
-  line-height 1.5  
+  line-height 1.8  
 .kinds
-  margin-bottom 66px
+  margin-bottom 45px
   padding 29px 5%
   box-sizing border-box
   background-color #ffffff
@@ -399,26 +429,26 @@ ul {
     width 25%
     float left 
     color #000000
-    .list_bg 
-      width 8%
+    .list_bg       
       height 24px
-      .list_bg img 
-        width 100%
-        height 100%
+      img 
+        width 30%
+        //height 100%
     .product_title
       margin-top 5px
       margin-bottom 10px
       font-size 20px
       font-weight bold
     .product_content
-      font-size 16px
+      font-size 14px
+      line-height 1.5
   .product
     background-image url(../../assets/index/product_bg.png)
     background-repeat no-repeat   
     background-size 40% 70%;
     background-position-x 70%;
   .service
-    margin 0 10%
+    margin 0 12.5%
     background-image url(../../assets/index/service_bg.png)
     background-repeat no-repeat
     background-size 40% 70%;
@@ -432,41 +462,52 @@ ul {
   overflow hidden
 .featured_lists
   float left
-  width 30%
+  width 32%
+  height 390px
   background-color #ffffff
-  padding 2%
+  padding 1%
   box-sizing border-box
   .lists_img img
     width 100%
     height 100%
   .featured_title1
-    margin-top 8px 
+    margin-top 16px 
     margin-bottom 5px
     font-size 20px
     color #947E62
     font-weight bold
+    text-align center
   .featured_title2
-    margin-bottom 20px
-    font-size 18px
+    margin-bottom 15px
+    font-size 14px
     color #6B6B6B
+    text-align center
   .featured_content
-    font-size 16px
+    padding-left 2px
+    padding-right 2px
+    box-sizing border-box
+    font-size 14px
     color #000000     
     padding-bottom 10px
+    line-height 1.7
 .yuanyi
-    margin 0 5%
+    margin 0 2%
 .operating_procedures
   width 100%
-  padding 32px 18.75% 0 18.75%
+  padding 45px 18.75% 0 18.75%
   box-sizing border-box
-  background-color rgba(0,0,0,0.63)  
+  background-color rgba(0,0,0,0.83)  
   overflow hidden
   .operating_text
-    font-size 30px
-    color #B09A7D  
+    margin-bottom 10px
+    font-size 40px
+    color #dbb481  
+    font-weight bold 
   .operating_english
+    margin-bottom 15px
     color rgba(176,154,125,0.7)
     font-size 28px
+    font-weight bold 
 .operating_change
   float left
   width 15%
@@ -475,6 +516,7 @@ ul {
   color #ffffff
   li
    margin-bottom 20% 
+   cursor pointer
    .order
       display inline-block
       margin-right 5%
@@ -484,45 +526,53 @@ ul {
 .operating_change_content
   float left
   width 85%
-  overflow hidden
+  position relative
   .one_bg
+    position absolute
     float left
     width 100%
-    img
-      width 100%
+  .one_bgs
+    top 50px
 .banking
-  padding 25px 18.75% 0 18.75%
+  padding 45px 18.75% 0 18.75%
   box-sizing border-box
 .caifu_list
   overflow hidden
   .caifu_lists
+    cursor pointer
     float left
     width 30%
     p
+      font-size 14px
+      font-weight bold
+      color #2a2a2a
       text-align center
     img
       width 100%
-.caifu_lists:hover
-  color #B09A7D
-
+      margin-bottom 12px
 .line
   width 12%
   height 2px
   margin 7px auto 0
   background-color #c9c9c9    
 .license
+  margin-top 45px
   padding 2%
   box-sizinig border-box
   background-color rgba(255,255,255,0.56)  
   margin-bottom 50px
 .license_list
-  overflow hidden
   .license_lists
+    cursor pointer
     width 23.5%
     float left 
     img
       width 100%
+      margin-bottom 12px
     p
+      color #2a2a2a
+      font-size 14px
+      font-weight bold
       text-align center
 .mask
   display none
@@ -547,10 +597,19 @@ ul {
   background-position center center
   max-width 1920px
   height 1123.5px
-.wrap_bottom
-  background url(../../assets/index/home_banner2.png) no-repeat
+.operating_procedures
+  background url(../../assets/index/move_bg2.png) no-repeat
   background-attachment fixed
   background-position center center
+  background-size cover
   max-width 1920px
-  height 1168.16px
+  height 490px
+.wrap_bottom
+  background url(../../assets/index/move_bg3.png) no-repeat
+  background-attachment fixed
+  background-position center center
+  background-size cover
+  max-width 1920px
+  height 787px
+
 </style>

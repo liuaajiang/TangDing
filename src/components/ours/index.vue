@@ -127,18 +127,18 @@ export default {
            $(this).find(".lists_detail").hide();
       })
     },          
-    goTop () {
-      let self = this
-      self.timer = setInterval(function () {
-        let osTop = document.documentElement.scrollTop || document.body.scrollTop
-        let ispeed = Math.floor(-osTop / 5)
-        document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed
-        self.isTop = true
-        if (osTop === 0) {
-          clearInterval(self.timer)
-        }
-      }, 30)
-    }
+    // goTop () {
+    //   let self = this
+    //   self.timer = setInterval(function () {
+    //     let osTop = document.documentElement.scrollTop || document.body.scrollTop
+    //     let ispeed = Math.floor(-osTop / 5)
+    //     document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed
+    //     self.isTop = true
+    //     if (osTop === 0) {
+    //       clearInterval(self.timer)
+    //     }
+    //   }, 30)
+    // }
   }
 }
 </script>
@@ -169,29 +169,32 @@ ul {
 .bannering
     width 100%
     background rgba(0,0,0,0.5)   
-    height 100px
+    height 60px
     position absolute
     top 54px
 .banner_top
+    padding 5px 18.75% 0 18.75%
+    box-sizing border-box
     overflow hidden
-    width 62.5% 
-    margin 0 auto
-    .banner_title
-      margin-top 2.5%
+    .banner_title  
+      width 50%  
       float left
+      margin-top 5px
+      img
+        width 100%
     .navul
-     margin-top 5%
-     font-weight normal
-     overflow hidden     
-     float right
+      margin-top 2%
+      font-weight normal
+      overflow hidden     
+      float right
      li
-       float left
-       padding 0 10px 8px 10px
-       box-sizing border-box  
-       text-align center 
-       color #ffffff
+      float left
+      padding 0 10px 8px 10px
+      box-sizing border-box  
+      text-align center 
+      color #ffffff
      li:hover
-       border-bottom 2px solid #B09A7D
+        border-bottom 2px solid #B09A7D
 .about_content
     width 100%
     background-image url(../../assets/index/ours_bg.png)
@@ -291,4 +294,17 @@ ul {
         .mobile 
             margin-bottom 22px
             color rgba(255,255,255,0.8)
+.go-top
+  width 100%
+.gotop-btn
+  width 50px
+  height 50px
+  position fixed
+  right 0
+  bottom 235px
+  border none
+  display none
+  z-index 9999
+  img
+    width 100%
 </style>

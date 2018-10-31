@@ -123,5 +123,4 @@ ul {
       float right
       img 
         width 98%                
-  
 </style>
