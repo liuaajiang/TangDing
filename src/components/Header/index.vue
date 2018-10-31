@@ -6,7 +6,7 @@
                 <img src="@/assets/index/telephone.png" class="telephone"/>
                 <p class="kefu">客服电话：400-819-9868</p>
             </li>
-            <li>
+            <li style="cursor:pointer;">
             <!-- <el-popover
                 placement="top-start"
                 title="标题"
@@ -25,7 +25,7 @@
                     <el-button>大唐财富APP下载</el-button>
                 </el-tooltip>
             </li>
-            <li>
+            <li style="cursor:pointer;">
                  <img src="@/assets/index/weChat_icon.png" class="telephone"/>
                 <el-tooltip placement="top" class="service">
                     <div slot="content">

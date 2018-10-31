@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="footer_content">
-      <p class="hotline"><span style="margin-right:20px;">客服电话：400-819-9868</span><span>在线客服：(服务时间：08:30-17:30)</span></p>
+      <p class="hotline"><span style="margin-right:20px;">客服电话：400-819-9868</span><span><img class="online" src="@/assets/index/customer_service_img.png"/>在线客服：(服务时间：08:30-17:30)</span></p>
       <p class="partner">合作伙伴</p>
       <p class="partner_english">Cooperative partner</p>
       <p class="partnered">
@@ -123,5 +123,9 @@ ul {
       float right
       img 
         width 100%                
-  
+.online
+  width 25px
+  display inline-block
+  vertical-align middle
+  margin-right 5px  
 </style>
