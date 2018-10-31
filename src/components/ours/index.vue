@@ -203,24 +203,25 @@ ul {
 .content_wrap
     width 62.5%
     margin 0 auto
-    padding-top 66px
+    padding-top 45px
     color #ffffff       
     .ours_text
-        font-size 30px        
-        margin-bottom 5px
+        font-size 40px        
+        margin-bottom 10px
         font-weight bold
     .text_english
         font-size 28px
-        margin-bottom 35px
+        margin-bottom 15px
         font-weight bold
     .contetn_list
         font-size 18px
         color #CCCCCC
         .content_lists
             margin-bottom 40px
-            line-height 1.5
+            font-size 16px
+            line-height 1.8
 .kinds
-  margin-bottom 66px
+  margin-bottom 45px
   padding 29px 5%
   box-sizing border-box
   background-color #ffffff
@@ -230,26 +231,26 @@ ul {
     width 25%
     float left 
     color #000000
-    .list_bg 
-      width 8%
+    .list_bg       
       height 24px
-      .list_bg img 
-        width 100%
-        height 100%
+      img 
+        width 30%
+        //height 100%
     .product_title
       margin-top 5px
       margin-bottom 10px
       font-size 20px
       font-weight bold
     .product_content
-      font-size 16px
+      font-size 14px
+      line-height 1.5
   .product
     background-image url(../../assets/index/product_bg.png)
     background-repeat no-repeat   
     background-size 40% 70%;
     background-position-x 70%;
   .service
-    margin 0 10%
+    margin 0 12.5%
     background-image url(../../assets/index/service_bg.png)
     background-repeat no-repeat
     background-size 40% 70%;
