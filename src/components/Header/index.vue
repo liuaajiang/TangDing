@@ -50,9 +50,9 @@
     <div class="geren_wrap">
         <div class="geren">
             <div class="geren_left">
-                <p class="left_content1">唐鼎官网已暂停个人交易功能<br/> 立即下载大唐财富app体验移动交易服务吧~</p>
+                <p class="left_content1">唐鼎官网已暂停个人交易功能<br/> 立即下载大唐财富APP体验移动交易服务吧~</p>
                 <p class="left_content2">用手机号注册登录<br/>实名认证后即可绑定现有账户</p>
-                <img src="@/assets/index/dtcf_login.png" alt="" style="width:80%;">
+                <img src="@/assets/index/dtcf_login.png" alt="" style="width:60%;">
                 <p class="left_content3">请扫码下载大唐财富APP</p>
             </div>
             <div class="geren_right">
@@ -99,7 +99,7 @@ export default {
         },
         jinRong(){
             $(".jinrong").on('click',function(){
-                window.location.href="https://jg.tdyhfund.com/";
+                window.open("https://jg.tdyhfund.com/");
             })
         },
        
@@ -172,41 +172,44 @@ ul
   background rgba(0,0,0,0.7)
   z-index 3000
 .geren_wrap
-    width 52%
-    height 420px
+    width 680px
+    height 598px
     display none   
     box-sizing border-box 
     position fixed
-    top 20%
-    left 25%
+    top 50%
+    left 50%
     z-index 3000
-    overflow hidden   
+    overflow hidden 
+    margin -294.5px 0 0 -333.5px  
     //position relative
     .close
         width 3%
         position absolute
-        top 0
+        top 8px
         right 0
         img 
             width 100%
 .geren    
-    width 95%
-    height 400px
+    width 667px
+    height 569px
     padding-top 20px   
     .geren_left
         float left
         width 50%
-        padding 18px 15px
+        padding 48px 15px 36px
         box-sizing border-box
         text-align center
         background-color #ffffff
         .left_content1
             font-size 14px
             color #000000
+            line-height 20px
         .left_content2
-            margin 10px 0
+            margin 13px 0 5px
             font-size 13px
             color #B09A7D
+            line-height 18px
         .left_content3
             font-size 15px
             color #262626

@@ -195,7 +195,7 @@ export default {
     },
     enterJin (){
       $(".enter_jin").on('click',function(){
-           window.location.href="https://jg.tdyhfund.com/";
+           window.open("https://jg.tdyhfund.com/");
       })
     }
       
@@ -242,28 +242,31 @@ ul {
 .bannering
     width 100%
     background rgba(0,0,0,0.5)   
-    height 100px
+    min-height 70px
     position absolute
     top 40px
-   .banner_top
-    width 62.5% 
-    margin 0 auto
+.banner_top
+    padding 5px 18.75% 0 18.75%
+    box-sizing border-box
     overflow hidden
-    .banner_title
-      margin-top 3%
+    .banner_title  
+      width 50%  
       float left
+      margin-top 8px
+      img
+        width 100%
     .navul
-     margin-top 5%
-     font-weight normal
-     overflow hidden     
-     float right
+      margin-top 2.4%
+      font-weight normal
+      overflow hidden     
+      float right
      li
-       float left
-       padding 0 10px 8px 10px
-       box-sizing border-box  
-       text-align center 
-       color #ffffff
-       cursor pointer;
+      float left
+      padding 0 10px 8px 10px
+      box-sizing border-box  
+      text-align center 
+      color #ffffff
+      cursor pointer
      li:hover
         border-bottom 2px solid #B09A7D
 .server_content

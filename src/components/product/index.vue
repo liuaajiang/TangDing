@@ -77,7 +77,7 @@
                         <div class="card_text">企业金融</div>
                         <div class="line_right line"></div>
                     </div> 
-                    <div class="enter_jinrong">
+                    <div class="enter_jinrong enter_jin">
                         <!-- <img src="@/assets/index/enter_jin.png" alt=""> -->
                         <span class="enter_text" style="font-size:14px;">进入企业金融</span>                       
                     </div> 
@@ -95,7 +95,7 @@ export default {
   methods: {    
     enterJin (){
       $(".enter_jin").on('click',function(){
-           window.location.href="https://jg.tdyhfund.com/";
+           window.open("https://jg.tdyhfund.com/");
       })
     }
   }
@@ -130,7 +130,7 @@ ul {
 .bannering
     width 100%
     background rgba(0,0,0,0.5)   
-    height 60px
+    min-height 70px
     position absolute
     top 40px
 .banner_top
@@ -140,11 +140,11 @@ ul {
     .banner_title  
       width 50%  
       float left
-      margin-top 5px
+      margin-top 8px
       img
         width 100%
     .navul
-      margin-top 2%
+      margin-top 2.4%
       font-weight normal
       overflow hidden     
       float right
@@ -160,9 +160,10 @@ ul {
 .product_content
     padding 70px 18.75% 23px 18.75%
     box-sizing border-box
-    background-image url("../../assets/index/producting_bg.png")
-    background-repeat no-repeat
-    background-size cover  
+    background-image url("../../assets/index/producting_bg.png")     
+    background-attachment fixed
+    background-position center center
+    background-size cover         
     .content_left
         margin-bottom 88px
         position relative       
@@ -263,7 +264,7 @@ ul {
 .enter_jinrong
     width 39%
     height 10%
-    background-image url(/static/img/enter_jin.b79f0d6.png)
+    background-image url(../../assets/index/enter_jin.png)
     background-repeat no-repeat
     background-size 100% 100%
     position absolute
@@ -274,7 +275,7 @@ ul {
     box-sizing border-box
     color #402D14
     font-weight bold
-
+    cursor pointer
 
 
 </style>
