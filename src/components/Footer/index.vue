@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="footer_content">
-      <div class="hotline" style="overflow:hidden;font-size:14px;color:#fff;"><span style="margin-right:20px;float: left;">客服电话：400-819-9868</span><div style="float:left"><img src="@/assets/index/Customer service_img.png" style="width:18px;height:18px;float: left;padding-right: 5px;margin-top: -1px;display: block;"/><span>在线客服：(服务时间：08:30-17:30)</span></div></div>
+      <div class="hotline" style="overflow:hidden;font-size:14px;color:#fff;"><span style="margin-right:20px;float: left;">客服电话：400-819-9868</span><div style="float:left"><img src="@/assets/index/Customer_service_img.png" style="width:18px;height:18px;float: left;padding-right: 5px;margin-top: -1px;display: block;"/><span>在线客服：(服务时间：08:30-17:30)</span></div></div>
       <p class="partner">合作伙伴</p>
       <p class="partner_english">Cooperative partner</p>
       <p class="partnered">
