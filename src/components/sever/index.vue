@@ -1,7 +1,7 @@
 <template>
     <div class="index">
         <div class="banner">
-            <img class="banner_img" src="@/assets/index/banner_product.png" alt=""> 
+            <img class="banner_img" src="@/assets/index/banner3.jpg" alt=""> 
         </div>
         <div class="bannering">
                 <div class="banner_top">
@@ -160,26 +160,9 @@ export default {
     }
   },
   mounted () {
-    this.needScroll()
     this.changeCai()       
   },
-  methods: {
-    needScroll () {
-      let clientHeight = document.documentElement.clientHeight
-      let obtn = this.$refs.btn
-      window.onscroll = function () {
-        let osTop = document.documentElement.scrollTop || document.body.scrollTop
-        if (osTop >= clientHeight) {
-          obtn.style.display = 'block'
-        } else {
-          obtn.style.display = 'none'
-        }
-        if (!this.isTop) {
-          clearInterval(this.timer)
-        }
-        this.isTop = false
-      }
-    },
+  methods: {    
     changeCai (){
       $(".caifu_lists").hover(function(){
           $(this).find(".lists_title").hide();
@@ -188,20 +171,6 @@ export default {
           $(this).find(".lists_title").show();
            $(this).find(".lists_detail").hide();
       })
-    },
-     
-      
-    goTop () {
-      let self = this
-      self.timer = setInterval(function () {
-        let osTop = document.documentElement.scrollTop || document.body.scrollTop
-        let ispeed = Math.floor(-osTop / 5)
-        document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed
-        self.isTop = true
-        if (osTop === 0) {
-          clearInterval(self.timer)
-        }
-      }, 30)
     }
   }
 }
@@ -229,6 +198,7 @@ ul {
    width 100%  
    position relative
    img 
+    width 100%
     vertical-align middle
 .bannering
     width 100%

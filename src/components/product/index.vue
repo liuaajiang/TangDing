@@ -1,7 +1,7 @@
 <template>
     <div class="index">
         <div class="banner">
-            <img class="banner_img" src="@/assets/index/banner_product.png" alt="">          
+            <img class="banner_img" src="@/assets/index/banner2.jpg" alt="">          
         </div>
          <div class="bannering">
                 <div class="banner_top">
@@ -12,7 +12,7 @@
                         <router-link tag="li" to="/index">首页</router-link>
                         <router-link tag="li" to="/product">产品</router-link>
                         <router-link tag="li" to="/sever">服务</router-link>
-                        <router-link tag="li" to="/register">企业金融</router-link>
+                        <router-link tag="li" to="" class="enter_jin">企业金融</router-link>
                         <router-link tag="li" to="/ours">关于我们</router-link>
                     </ul> 
                 </div>
@@ -25,7 +25,7 @@
                     <p class="contetnt_detail_text">公募基金是市场上最透明、最规范的基金，有着制度优势与专业优势，以百元起的低门槛投资产品解决一切标准化资产的投资需求，可为客户提供丰富的公募及专户理财产品。目前平台已与53家基金公司长期合作，代销了1408只公募基金，涵盖市场上常见的大部分基金。</p>
                 </div>
                  <div class="img_right">
-                    <img src="@/assets/index/finance_img.png" alt="">   
+                    <img src="@/assets/index/public_img.png" alt="">   
                     <div class="bring_card clearfix">
                         <div class="line_left line"></div>
                         <div class="card_text">公募基金</div>
@@ -41,7 +41,7 @@
                     <p class="contetnt_detail_text_right">唐鼎耀华母公司大唐财富及其他子公司拥有不同类型的私募证券投资基金管理人资质，专业的投研团队提供了元山、元一、唐诚、唐盈等多款优质私募系列产品。除销售大唐财富管理的私募产品之外，公司也已与其他优秀的私募机构合作代销产品。</p>
                 </div>
                  <div class="img_right_right">
-                    <img src="@/assets/index/finance_img.png" alt="">
+                    <img src="@/assets/index/private_img.png" alt="">
                     <div class="bring_card clearfix">
                         <div class="line_left line"></div>
                         <div class="card_text">私募基金</div>
@@ -56,7 +56,7 @@
                     <p class="contetnt_detail_text">券商资管计划在操作模式上与信托最接近，但产品收益高于信托，在募集速度和投资者喜好程度上更胜信托。目前唐鼎耀华正在与东证融汇、国海资管、广发资管、中泰证券等公司展开合作，资管计划即将上线。</p>
                 </div>
                  <div class="img_right">
-                    <img src="@/assets/index/finance_img.png" alt="">
+                    <img src="@/assets/index/plan_img.png" alt="">
                     <div class="bring_card clearfix">
                         <div class="line_left line"></div>
                         <div class="card_text">资管计划</div>
@@ -64,7 +64,7 @@
                     </div>   
                 </div>
             </div>
-            <div class="content_right" style="margin-bottom:110px">
+            <div class="content_right" style="margin-bottom:59px">
                 <p class="content_title_right">企业金融</p>
                 <div class="contetnt_detail_right">
                     <p class="title_english_right">ENTERPRISE FINANCE</p>
@@ -77,9 +77,9 @@
                         <div class="card_text">企业金融</div>
                         <div class="line_right line"></div>
                     </div> 
-                    <div class="enter_jin">
-                        进入企业金融
-                        
+                    <div class="enter_jinrong">
+                        <!-- <img src="@/assets/index/enter_jin.png" alt=""> -->
+                        <span class="enter_text" style="font-size:14px;">进入企业金融</span>                       
                     </div> 
                 </div>
             </div>
@@ -87,40 +87,16 @@
     </div>
 </template>
 <script>
-import axios from 'axios';
 export default {
   name: 'product',
   mounted () {
-    this.needScroll()
+    this.enterJin()       
   },
-  methods: {
-    needScroll () {
-      let clientHeight = document.documentElement.clientHeight
-      let obtn = this.$refs.btn
-      window.onscroll = function () {
-        let osTop = document.documentElement.scrollTop || document.body.scrollTop
-        if (osTop >= clientHeight) {
-          obtn.style.display = 'block'
-        } else {
-          obtn.style.display = 'none'
-        }
-        if (!this.isTop) {
-          clearInterval(this.timer)
-        }
-        this.isTop = false
-      }
-    },           
-    goTop () {
-      let self = this
-      self.timer = setInterval(function () {
-        let osTop = document.documentElement.scrollTop || document.body.scrollTop
-        let ispeed = Math.floor(-osTop / 5)
-        document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed
-        self.isTop = true
-        if (osTop === 0) {
-          clearInterval(self.timer)
-        }
-      }, 30)
+  methods: {    
+    enterJin (){
+      $(".enter_jin").on('click',function(){
+           window.location.href="https://jg.tdyhfund.com/";
+      })
     }
   }
 }
@@ -149,120 +125,132 @@ ul {
    width 100%  
    position relative
    img 
+    width 100%
     vertical-align middle
 .bannering
     width 100%
     background rgba(0,0,0,0.5)   
-    height 100px
+    height 60px
     position absolute
-    top 54px
+    top 40px
 .banner_top
-    width 62.5% 
-    margin 0 auto
+    padding 5px 18.75% 0 18.75%
+    box-sizing border-box
     overflow hidden
-    .banner_title
-      margin-top: 2.5%;
+    .banner_title  
+      width 50%  
       float left
+      margin-top 5px
+      img
+        width 100%
     .navul
-      margin-top 4.5%
+      margin-top 2%
       font-weight normal
       overflow hidden     
       float right
-      li
-       float left
-       padding 0 10px 8px 10px
-       box-sizing border-box  
-       text-align center 
-       color #ffffff
-      li:hover
+     li
+      float left
+      padding 0 10px 8px 10px
+      box-sizing border-box  
+      text-align center 
+      color #ffffff
+      cursor pointer
+     li:hover
         border-bottom 2px solid #B09A7D
 .product_content
-    padding 25px 18.75% 23px 18.75%
+    padding 70px 18.75% 23px 18.75%
     box-sizing border-box
-    //background-image url("../../assets/index/banner_product.png");
-    //background-repeat no-repeat
+    background-image url("../../assets/index/product_content_bg.png")
+    background-repeat no-repeat
+    background-size cover
     background-color rgba(0,0,0,0.83)   
     .content_left
-        margin-bottom 154px
+        margin-bottom 88px
         position relative       
 .content_title    
-    margin-bottom 5px
-    font-size 30px
+    margin-bottom 6px
+    font-size 40px
+    font-weight bold
     color #ffffff
 .contetnt_detail
     width 90%
-    padding-bottom: 66px
+    padding-bottom: 24px
     background-color rgba(0,0,0,0.5)
     .title_english
-        margin-left 8px
-        margin-top 2px
+        padding-top 7px
+        margin-left 8px       
         font-size 28px
-        color #ffffff
+        color rgba(255,255,255,0.8)
+        font-weight bold
     .contetnt_detail_text
-        width 50%
-        margin-left 5%
-        margin-top 42px
-        font-size 18px
+        width 58%
+        margin-left 6.5%
+        margin-top 25px
+        font-size 15px
         color #dec19c
+        line-height 2.2
 .img_right
-    width: 330px
-    height: 330px
-    position: absolute
-    top: -7%
-    right: 3%
+    width 330px
+    height 330px
+    position absolute
+    top -7%
+    right 0
     img 
         width 100%
         height 100%   
 .content_right
-    margin-bottom: 154px;
-    position: relative;
+    margin-bottom 88px
+    position relative
 .content_title_right
     padding-left 42%
     box-sizing border-box
-    margin-bottom 5px
-    font-size 30px
+    margin-bottom 6px
+    font-size 40px
+    font-weight bold
     color #fff
 .contetnt_detail_right
     width 90%
     margin-left 10%
-    padding-bottom 66px
+    padding-bottom 59px
     background-color rgba(0,0,0,0.5)
     .title_english_right
+        padding-top 7px
+        font-weight bold
         margin-left 8px
-        margin-top 2px
         padding-left 35%
         box-sizing border-box
         font-size 28px
-        color #fff
+        color rgba(255,255,255,0.8)
     .contetnt_detail_text_right
-        width 50%
-        margin-left 30%
-        margin-top 42px
-        font-size 18px
+        width 58%
+        line-height 2.2
+        margin-top 25px
+        margin-left 36%       
+        font-size 15px
         color #dec19c
 .img_right_right
     width 330px
     height 330px
     position absolute
     top -7%
-    left -2%
+    left 0
     img 
         width 100%
         height 100%
 .bring_card
     width 100%
     position absolute
-    top 46%
-    left 14%   
+    top 48%
+    left 18%   
     margin-bottom 0.4rem
 .card_text
     float left
-    font-size 30px
-    margin -13px 10px
+    font-size 27px
+    margin -10px 10px
     color #ffffff
 .line
     float left
-    width 16%
+    width 13%
     height 5px
     border-bottom 1px solid #ffffff
 .clearfix:after
@@ -273,15 +261,15 @@ ul {
     visibility hidden 
 .clearfix
     zoom 1
-.enter_jin
-    width 47%
-    height 12%
+.enter_jinrong
+    width 39%
+    height 10%
     background-image url(/static/img/enter_jin.b79f0d6.png)
     background-repeat no-repeat
     background-size 100% 100%
     position absolute
-    top 57%
-    left 25%
+    top 70%
+    left 31%
     text-align center
     padding-top 3%
     box-sizing border-box

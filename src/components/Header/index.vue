@@ -52,7 +52,7 @@
             <div class="geren_left">
                 <p class="left_content1">唐鼎官网已暂停个人交易功能<br/> 立即下载大唐财富app体验移动交易服务吧~</p>
                 <p class="left_content2">用手机号注册登录<br/>实名认证后即可绑定现有账户</p>
-                <img src="@/assets/index/dtcf.png" alt="" style="width:80%;">
+                <img src="@/assets/index/dtcf_login.png" alt="" style="width:80%;">
                 <p class="left_content3">请扫码下载大唐财富APP</p>
             </div>
             <div class="geren_right">

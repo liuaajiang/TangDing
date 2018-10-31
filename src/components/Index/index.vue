@@ -2,7 +2,7 @@
   <div class="index">
     <!-- <h1>{{ msg }}</h1> -->
     <div class="banner">
-        <img class="banner_img" src="@/assets/index/banner_home.png" alt="" >          
+        <img class="banner_img" src="@/assets/index/banner1.jpg" alt="" >          
       </div>
        <div class="bannering">                
                 <div class="banner_top">
@@ -14,7 +14,6 @@
                         <router-link tag="li" to="/product" class="navul_list">产品</router-link>
                         <router-link tag="li" to="/sever" class="navul_list">服务</router-link>
                         <router-link tag="li" to="" class="navul_list jinrong">企业金融</router-link>
-                        <!-- <li class="navul_list"><a href="https://jg.tdyhfund.com/" style="color:#ffffff">企业金融</a></li> -->
                         <router-link tag="li" to="/ours" class="navul_list">关于我们</router-link>
                     </ul> 
                 </div>
