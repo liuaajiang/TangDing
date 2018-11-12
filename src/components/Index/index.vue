@@ -1,37 +1,24 @@
 <template>
-  <div class="index">
+  <div class="Index">
     <!-- <h1>{{ msg }}</h1> -->
     <div class="banner">
         <img class="banner_img" src="@/assets/index/banner1.png" alt="" >          
       </div>
-       <div class="bannering">                
-                <div class="banner_top">
-                    <div class="banner_title">
-                    <img src="@/assets/index/top_title.png" alt="">         
-                    </div>
-                    <ul class="navul">
-                        <router-link tag="li" to="/index" class="navul_list">首页</router-link>
-                        <router-link tag="li" to="/product" class="navul_list">产品</router-link>
-                        <router-link tag="li" to="/sever" class="navul_list">服务</router-link>
-                        <router-link tag="li" to="" class="navul_list jinrong">企业金融</router-link>
-                        <router-link tag="li" to="/ours" class="navul_list">关于我们</router-link>
-                    </ul> 
-                </div>
-        </div>
-    <!-- <div class="messageList" >
+      <Navheader></Navheader>
+    <div class="messageList" >
       <el-row type="flex" class="row-bg" justify="center">
         <el-col :span="3"><div class="grid-content bg-purple">最新消息：</div></el-col>
         <el-col :span="20">
           <div class="grid-content bg-purple-light">
             <el-row >
               <el-col :span="12" v-for="(item,index) in messageList" :key="index">
-              <div class="grid-content bg-purple">{{item.text}}<span>{{item.date}}</span></div>
+              <div class="grid-content bg-purple"><span class="title_index">{{item.F_TITLE}}</span><span style="float:left">{{dateInit(item.F_DATE)}}</span></div>
               </el-col>
             </el-row>
           </div></el-col>
-        <el-col :span="3"><div class="grid-content bg-purple more">查看更多</div></el-col>
+        <el-col :span="3"><div class="grid-content bg-purple more" @click="jump_more">查看更多</div></el-col>
       </el-row>    
-    </div> -->
+    </div>
     <div class="companyProfile">    
       <div class="tang_introduce">
          <p class="introduce_title">唐鼎耀华</p>
@@ -50,9 +37,10 @@
             <p class="product_content">尊享财富师提供专业指导，一对一交流；400热线、在线客服随时提供在线支持。</p>
           </li>
           <li class="list supervision">
-             <div class="list_bg"></div>
+            <div class="list_bg"><img src="@/assets/index/security_img.png" alt=""></div>
+            <!-- <div class="list_bg"></div> -->
             <p class="product_title">全程监督监管</p>
-            <p class="product_content">证监会批准并监督管理，民生银行全程资金监管。</p>
+            <p class="product_content">证监会批准并监督管理，民生银行全程资金监管，资金安全有保障。</p>
           </li>
       </ul>
       <div class="featured_products">
@@ -65,7 +53,7 @@
             <div class="lists_img"><img src="@/assets/index/product_one_img.png" alt=""></div>
             <p class="featured_title1">元山母基金系列</p>
             <p class="featured_title2">他山之石，聚力元山</p>
-            <p class="featured_content">作为市场首只投资不良资产的母基金，元山母基金抓住市场先机，利用团队的专业优势，用直投的眼光做母基金，通过全面配置、优中选优的策略，迅速在行业和高净值客户层面第一时间打开市场，树立口碑，建立品牌。</p>
+            <p class="featured_content">元山母基金系列作为市场首只投资不良资产的母基金，元山母基金抓住市场先机，利用团队的专业优势，用直投的眼光做母基金，通过全面配置、优中选优的策略，迅速在行业和高净值客户层面第一时间打开市场，树立口碑，建立品牌。</p>
           </li>
           <li class="featured_lists yuanyi">
             <div class="lists_img"><img src="@/assets/index/product_two_img.png" alt=""></div>
@@ -139,28 +127,30 @@
           <ul class="license_list clearfloat">            
             
             <li class="license_lists xuke">
-              <img src="@/assets/index/plate1_img.png" alt="">
+              <img src="@/assets/index/plate1_img.png" alt="" class="lic_img">
               <div>
                 <p class="license_text">经营证券期货业务许可证</p>
                 <div class="line"></div>
               </div>
             </li>
             <li class="license_lists yingye" style="margin: 0 2%;">
-              <img src="@/assets/index/plate2_img.png" alt="">
+              <img src="@/assets/index/plate2_img.png" alt="" class="lic_img2">
+              <img src="@/assets/index/plate522@2x.png" alt="" class="lic_img3" >
+              <!-- <div class="lic_img2"></div> -->
               <div>
                 <p class="license_text">营业执照</p>
                 <div class="line"></div>
               </div>
             </li>
             <li class="license_lists huiyuan" style="margin-right:2%;">
-              <img src="@/assets/index/plate3_img.png" alt="">
+              <img src="@/assets/index/plate3_img.png" alt="" class="lic_img">
               <div>
                 <p class="license_text">基金业协会会员证书</p>
                 <div class="line"></div>
               </div>
             </li>
             <li class="license_lists">
-              <img src="@/assets/index/plate4_img.png" alt="">
+              <img src="@/assets/index/plate4_img.png" alt="" class="lic_img">
               <div>
                 <p class="license_text">民生银行全程资金监管</p>
                 <div class="line"></div>
@@ -178,37 +168,64 @@
       </div>     
     </div> 
     <div  title="" class="chat"><img src="@/assets/index/chat.png" alt=""></div>            
-    <div @click="goTop" ref="btn" title="回到顶部" class="gotop-btn"><img src="@/assets/index/up_right_img.png" alt=""></div>            
-   </div>
+    <!-- <div @click="goTop" ref="btn" title="回到顶部" class="gotop-btn"><img src="@/assets/index/up_right_img.png" alt=""></div>             -->
+  </div>
   
 </template>
 <script>
-import axios from 'axios';
+import axios from 'axios'
+import Navheader from '@/components/Navheader'
 export default {
   name: 'Index',
   data () {
     return {
-      msg: 'Welcome to Your  App11111111111111',
+      msg: 'Welcome to Your ',
       activeName2: 'first',
       tabPosition: 'left',
       list: [6,7,8,4,5],
       isTop: true,
       timer: null,
-      messageList: [
-        { "text":"南方日添益货币E暂停申购通知" , "date":"2018.08.18" }, 
-        { "text":"新版大唐财富APP上线通知" , "date":"2018.08.19" }, 
-        // { "text":"新版大唐财富师APP上线通知" , "date":"2018.08.19" }
-      ]
+      pageSize:2,
+      pageNum:1,
+      messageList: ''
     }
   },
+  components:{Navheader},
   mounted () {
-    this.needScroll()
+    //this.needScroll()
     this.changeTable()
     this.changeOperation()
-    this.jinRong()
-    //this.changeLicens()    
+    //this.changeLicens()  
+    this.imgScola()  
   },
   methods: {
+    getData:function(){
+        let that = this;
+        //console.log(that.pageNum)
+        axios({
+            method:'get',
+            url:'https://funddata.tdyhfund.com/fundDataManage/fundInfo/AllNoticeList',
+            params: {
+                pageSize: that.pageSize,
+                pageNum: that.pageNum
+            }
+        })
+        .then(function(res) {//成功之后
+           // console.log(res.data.data)
+            that.fullscreenLoading = false
+            var retCode=res.data.retCode
+            var retMsg=res.data.retMsg;
+            if(retCode == 0){
+                that.messageList = res.data.data.NOTICE_LIST
+                
+            }
+        });
+    },
+    dateInit (da){  
+        var date = da.toString()
+        var Date = date.substring(0, 4) + '.' + date.substring(4, 6)+ '.' + date.substring(6, 8)
+        return Date
+    }, 
     needScroll () {
       let clientHeight = document.documentElement.clientHeight
       let obtn = this.$refs.btn
@@ -224,12 +241,28 @@ export default {
         }
         this.isTop = false
       }
-    },    
-    jinRong(){
-      $(".jinrong").on('click',function(){
-          window.open("https://jg.tdyhfund.com/")
-      })     
     },
+    jump_more(){
+      this.$router.push({
+        path:'/Message',
+        name: 'Message'
+      })
+    },
+    imgScola (){     
+        $(".yingye").hover(function(){   
+          $(".lic_img3").show() 
+          $(".lic_img3").css({
+            width:410,height:580,left:-100,top:-200
+          })             
+          $(".lic_img2").hide()   
+        },function(){
+          $(".lic_img2").show() 
+          $(".lic_img3").css({
+            width:190,height:120,left:0,top:0
+          })   
+          $(".lic_img3").hide()   
+        });      
+     },   
      changeTable (){     
         $(".caifu_lists").hover(function(){   
           $(this).find("p").css("color","#B09A7D");                 
@@ -267,53 +300,65 @@ export default {
     //    });
     //  },
         
-    goTop () {
-      let self = this
-      self.timer = setInterval(function () {
-        let osTop = document.documentElement.scrollTop || document.body.scrollTop
-        let ispeed = Math.floor(-osTop / 5)
-        document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed
-        self.isTop = true
-        if (osTop === 0) {
-          clearInterval(self.timer)
-        }
-      }, 30)
-    }
+    // goTop () {
+    //   let self = this
+    //   self.timer = setInterval(function () {
+    //     let osTop = document.documentElement.scrollTop || document.body.scrollTop
+    //     let ispeed = Math.floor(-osTop / 5)
+    //     document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed
+    //     self.isTop = true
+    //     if (osTop === 0) {
+    //       clearInterval(self.timer)
+    //     }
+    //   }, 30)
+    // }
+  },
+  created(){
+    this.getData()
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
-*{margin:0;padding: 0;}
-ul,li,ol{list-style:none;}
-img,fieldset,button{border:0; }							
-a{text-decoration:none;}			
-h1,h2,h3,h4,h5,h6{font-weight:100;}			
-body{font-family: "Microsoft Yahei","微软雅黑","Tahoma","Helvetica","STHeiti";position:relative;}			
-input,a,select{outline:none;}
-i{font-style:normal;}	
-html,body{width:100%}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
 .one_bg img{
 width:100%;
 }
+.license_lists{
+  position: relative;
+}
 .license_lists img{
-z-index:9999;
+
 transition: all .5s ease;
 } 
-.license_lists:hover img{
-transform: scale(2)
-} 
-.index
+.license_lists:hover .lic_img{
+  transform: scale(3.5);
+  z-index:99999;
+  position: absolute;
+}
+.lic_img3{
+ display: none;
+  z-index: 99999;
+  position: absolute;  
+}
+/* .license_lists .lic_img2{
+  background:url(../../assets/index/plate2_img.png);
+  height 120px
+  background-size 193px 120px
+}
+.license_lists .lic_img2:hover{
+  z-index:99999;
+  background:url(../../assets/index/plate522.png);
+  height:835px;
+  width:600px;
+  background-size:600px 835px;
+  transition: all .5s ease;
+} */
+.Index
   width 100%
-  overflow hidden
+  
   min-width 1200px
-  //position relative
+  position relative
 .banner 
    width 100%
    position relative
@@ -323,33 +368,9 @@ transform: scale(2)
 .bannering
     width 100%
     background rgba(0,0,0,0.5)   
-    min-height 70px
+    min-height 90px
     position absolute
-    top 40px
-.banner_top
-    padding 5px 18.75% 0 18.75%
-    box-sizing border-box
-    overflow hidden
-    .banner_title  
-      width 50%  
-      float left
-      margin-top 8px
-      img
-        width 100%
-    .navul
-      margin-top 2.4%
-      font-weight normal
-      overflow hidden     
-      float right
-     li
-      float left
-      padding 0 10px 8px 10px
-      box-sizing border-box  
-      text-align center 
-      color #ffffff
-      cursor pointer
-     li:hover
-        border-bottom 2px solid #B09A7D
+    top 0px
 .messageList    
   background-color #B09A7D
   color #230A01
@@ -361,7 +382,9 @@ transform: scale(2)
   .message
     margin-right 10px
   .more
-    color #776145    
+    color #776145
+  .more:hover
+    cursor pointer
 .go-top
   width 100%
 .gotop-btn
@@ -460,7 +483,7 @@ transform: scale(2)
 .featured_lists
   float left
   width 32%
-  /* height 390px */
+  min-height 410px
   background-color #ffffff
   padding 1%
   box-sizing border-box
@@ -507,7 +530,7 @@ transform: scale(2)
     font-weight bold 
 .operating_change
   float left
-  width 15%
+  width 16%
   margin-top 7%
   font-size 16px
   color #ffffff
@@ -522,7 +545,7 @@ transform: scale(2)
       padding-bottom 10px
 .operating_change_content
   float left
-  width 85%
+  width 84%
   height 355px
   position relative
   .one_bg
@@ -612,5 +635,20 @@ transform: scale(2)
   //max-width 1920px
   height 900px
   margin 0 auto
-
+.title_index
+  width 220px
+  display -webkit-box
+  display -moz-box
+  overflow hidden
+  white-space normal !important
+  -moz-text-overflow ellipsis
+  text-overflow ellipsis
+  word-wrap break-word
+  -webkit-line-clamp 1
+  /* autoprefixer: off */
+  -webkit-box-orient vertical
+  /* autoprefixer: on */
+  float left
+  height 20px
+  line-height 20px
 </style>

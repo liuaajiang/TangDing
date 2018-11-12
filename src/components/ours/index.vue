@@ -3,20 +3,7 @@
         <div class="banner">
             <img class="banner_img" src="@/assets/index/banner4.jpg" alt="">          
         </div>
-        <div class="bannering">
-                <div class="banner_top">
-                    <div class="banner_title">
-                    <img src="@/assets/index/top_title.png" alt="">         
-                    </div>
-                    <ul class="navul">
-                        <router-link tag="li" to="/index">首页</router-link>
-                        <router-link tag="li" to="/product">产品</router-link>
-                        <router-link tag="li" to="/sever">服务</router-link>
-                        <router-link tag="li" to="" class="enter_jin">企业金融</router-link>
-                        <router-link tag="li" to="/ours">关于我们</router-link>
-                    </ul> 
-                </div>
-            </div>
+        <Navheader></Navheader>
         <div class="about_content">
             <div class="content_wrap">
                 <p class="ours_text">关于我们</p>
@@ -38,7 +25,7 @@
                         <p class="product_content">尊享财富师提供专业指导，一对一交流；400热线、在线客服随时提供在线支持。</p>
                     </li>
                     <li class="list supervision">
-                        <div class="list_bg"></div>
+                        <div class="list_bg"><img src="@/assets/index/security_img.png" alt=""></div>
                         <p class="product_title">全程监督监管</p>
                         <p class="product_content">证监会批准并监督管理，民生银行全程资金监管。</p>
                     </li>
@@ -79,7 +66,7 @@
     </div>
 </template>
 <script>
-import axios from 'axios';
+import Navheader from '@/components/Navheader'
 export default {
   name: 'Index',
   data () {
@@ -97,9 +84,9 @@ export default {
       ]
     }
   },
+  components:{Navheader},
   mounted () {
     this.changeCai() 
-    this.enterJin()     
   },
   methods: {     
     changeCai (){
@@ -110,33 +97,19 @@ export default {
           $(this).find(".lists_title").show();
            $(this).find(".lists_detail").hide();
       })
-    },
-    enterJin (){
-      $(".enter_jin").on('click',function(){
-           window.open("https://jg.tdyhfund.com/");
-      })
     }        
   }
 }
 </script>
 <style scoped lang="stylus">
-*{margin:0;padding: 0;}
-ul,li,ol{list-style:none;}
-img,fieldset,button{border:0; }							
-a{text-decoration:none;}			
-h1,h2,h3,h4,h5,h6{font-weight:100;}			
-body{font-family: "Microsoft Yahei","微软雅黑","Tahoma","Helvetica","STHeiti";position:relative;}			
-input,a,select{outline:none;}
-i{font-style:normal;}	
-html,body{width:100%}
-ul {
-  list-style-type: none;
-  padding: 0;
+#zhichiBtnBox{
+    display: none;
 }
 .index{
   width:100%;
   overflow:hidden;
   min-width:1200px;
+  position relative
 }
 .banner 
    width 100%  
@@ -147,33 +120,9 @@ ul {
 .bannering
     width 100%
     background rgba(0,0,0,0.5)   
-    min-height 70px
+    min-height 90px
     position absolute
-    top 40px
-.banner_top
-    padding 5px 18.75% 0 18.75%
-    box-sizing border-box
-    overflow hidden
-    .banner_title  
-      width 50%  
-      float left
-      margin-top 8px
-      img
-        width 100%
-    .navul
-      margin-top 2.4%
-      font-weight normal
-      overflow hidden     
-      float right
-     li
-      float left
-      padding 0 10px 8px 10px
-      box-sizing border-box  
-      text-align center 
-      color #ffffff
-      cursor pointer
-     li:hover
-        border-bottom 2px solid #B09A7D
+    top 0px
 .about_content
     width 100%
     background-image url(../../assets/index/ours_bg.png)

@@ -38,9 +38,9 @@
         </ul>
         <ul class="topRight">
             <li class="logining">[个人登录]</li>{{user}}
-            <router-link tag="li" to="" class="jinrong">
+            <li to="" class="jinrong_a">
                     [企业登录]
-            </router-link>
+            </li>
             <li>
                 <a href="https://www.datangwealth.com/" target="_blank" class="jump_tang">大唐财富官网</a>
             </li>
@@ -50,7 +50,7 @@
     <div class="geren_wrap">
         <div class="geren">
             <div class="geren_left">
-                <p class="left_content1">唐鼎官网已暂停个人交易功能<br/> 立即下载大唐财富APP体验移动交易服务吧~</p>
+                <p class="left_content1">PC公募基金交易功能已迁移至APP<br/> 立即下载大唐财富APP体验移动交易服务吧~</p>
                 <p class="left_content2">用手机号注册登录<br/>实名认证后即可绑定现有账户</p>
                 <img src="@/assets/index/dtcf_login.png" alt="" style="width:60%;">
                 <p class="left_content3">请扫码下载大唐财富APP</p>
@@ -98,8 +98,8 @@ export default {
             })
         },
         jinRong(){
-            $(".jinrong").on('click',function(){
-                window.open("https://jg.tdyhfund.com/");
+            $(".jinrong_a").on('click',function(){
+                window.open("https://jg.tdyhfund.com/",'_blank');
             })
         },
        
@@ -109,7 +109,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
-*{margin:0;padding:0}
 ul
     list-style-type none
     padding 0

@@ -1,7 +1,16 @@
 <template>
   <div class="footer">
     <div class="footer_content">
-      <div class="hotline" style="overflow:hidden;font-size:14px;color:#fff;"><span style="margin-right:20px;float: left;font-size:16px;">客服电话：400-819-9868</span><div style="float:left"><img src="@/assets/index/Customer_service_img.png" style="width:20px;height:20px;float: left;padding-right: 6px;margin-top: -1px;display: block;"/><span><span style="font-size:16px;">在线客服</span>（服务时间：工作日08:30-17:30）</span></div></div>
+      <div class="hotline" style="overflow:hidden;font-size:14px;color:#fff;">
+        <span style="margin-right:20px;float: left;font-size:16px;">客服电话：400-819-9868</span>
+        <div style="float:left">
+          <a href="https://www.sobot.com/chat/pc/index.html?sysNum=800fcb3a85a54c73b1cd5df006b9be0c" data-args="robotFlag=3" target="_blank">
+            <img src="@/assets/index/Customer_service_img.png" style="width:20px;height:20px;float: left;padding-right: 6px;margin-top: -1px;display: block;"/>
+            <span style="font-size:16px;color: #fff;">在线客服</span>
+          </a>
+          <span>（服务时间：工作日08:30-17:30）</span>
+        </div>
+      </div>
       <p class="partner">合作伙伴</p>
       <p class="partner_english">Cooperative partner</p>
       <p class="partnered">

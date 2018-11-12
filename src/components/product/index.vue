@@ -3,20 +3,8 @@
         <div class="banner">
             <img class="banner_img" src="@/assets/index/banner2.jpg" alt="">          
         </div>
-         <div class="bannering">
-                <div class="banner_top">
-                    <div class="banner_title">
-                    <img src="@/assets/index/top_title.png" alt="">         
-                    </div>
-                    <ul class="navul">
-                        <router-link tag="li" to="/index">首页</router-link>
-                        <router-link tag="li" to="/product">产品</router-link>
-                        <router-link tag="li" to="/sever">服务</router-link>
-                        <router-link tag="li" to="" class="enter_jin">企业金融</router-link>
-                        <router-link tag="li" to="/ours">关于我们</router-link>
-                    </ul> 
-                </div>
-            </div>
+        <Navheader></Navheader>
+         
         <div class="product_content">
             <div class="content_left">
                 <p class="content_title">公募基金</p>
@@ -87,39 +75,24 @@
     </div>
 </template>
 <script>
+import Navheader from '@/components/Navheader'
 export default {
   name: 'product',
-  mounted () {
-    this.enterJin()       
+  mounted () {      
   },
-  methods: {    
-    enterJin (){
-      $(".enter_jin").on('click',function(){
-           window.open("https://jg.tdyhfund.com/");
-      })
-    }
+  components:{Navheader},
+  methods: { 
+    
   }
 }
 </script>
 
 <style scoped lang="stylus">
-*{margin:0;padding: 0;}
-ul,li,ol{list-style:none;}
-img,fieldset,button{border:0; }							
-a{text-decoration:none;}			
-h1,h2,h3,h4,h5,h6{font-weight:100;}			
-body{font-family: "Microsoft Yahei","微软雅黑","Tahoma","Helvetica","STHeiti";position:relative;}			
-input,a,select{outline:none;}
-i{font-style:normal;}	
-html,body{width:100%}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
 .index{
   width:100%;
   overflow:hidden;
   min-width:1200px;
+  position relative
 }
 .banner 
    width 100%  
@@ -130,33 +103,9 @@ ul {
 .bannering
     width 100%
     background rgba(0,0,0,0.5)   
-    min-height 70px
+    min-height 90px
     position absolute
-    top 40px
-.banner_top
-    padding 5px 18.75% 0 18.75%
-    box-sizing border-box
-    overflow hidden
-    .banner_title  
-      width 50%  
-      float left
-      margin-top 8px
-      img
-        width 100%
-    .navul
-      margin-top 2.4%
-      font-weight normal
-      overflow hidden     
-      float right
-     li
-      float left
-      padding 0 10px 8px 10px
-      box-sizing border-box  
-      text-align center 
-      color #ffffff
-      cursor pointer
-     li:hover
-        border-bottom 2px solid #B09A7D
+    top 0px
 .product_content
     padding 70px 18.75% 23px 18.75%
     box-sizing border-box
@@ -263,7 +212,7 @@ ul {
     zoom 1
 .enter_jinrong
     width 39%
-    height 10%
+    height 11%
     background-image url(../../assets/index/enter_jin.png)
     background-repeat no-repeat
     background-size 100% 100%
