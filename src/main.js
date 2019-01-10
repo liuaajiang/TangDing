@@ -6,6 +6,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import App from './App'
 import router from './router'
+import "babel-polyfill"
 import store from './vuex/store'
 import $ from 'jquery'
 

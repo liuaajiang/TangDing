@@ -15,9 +15,9 @@
             
          
             <ul class="navul">
-                <router-link tag="li" to="/Information" class="navul_list" active-class="active">
+                <!-- <router-link tag="li" to="/Information" class="navul_list" active-class="active">
                 收费资讯
-                </router-link>
+                </router-link> -->
                 <router-link tag="li" to="/ours" class="navul_list" active-class="active">
                   关于我们
                 </router-link>

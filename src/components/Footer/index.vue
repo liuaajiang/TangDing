@@ -11,6 +11,7 @@
           <span>（服务时间：工作日08:30-17:30）</span>
         </div>
       </div>
+      <p style="line-height:22px;font-size:16px;padding-bottom:10px;">中植财富营销举报箱地址：jubao@zhongzhi.com.cn</p>
       <p class="partner">合作伙伴</p>
       <p class="partner_english">Cooperative partner</p>
       <p class="partnered">
@@ -98,7 +99,7 @@ ul {
     color #ffffff
     font-size 14px
   .hotline
-    margin-bottom 2%
+    margin-bottom 1.6%
   .partner
    font-size 24px
   .partner_english
@@ -106,7 +107,7 @@ ul {
     color #616162
     font-size 14px
   .partnered 
-    margin-bottom 4%
+    margin-bottom 3%
     a
       display inline-block
       margin-right 10px

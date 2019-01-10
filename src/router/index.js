@@ -14,6 +14,9 @@ import detail from '@/components/Information/detail'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
+  // base: '/dist/',             //添加根目录
+  // 	scrollBehavior: () => ({ y: 0 }),
   routes: [
     {
       path: '/',
