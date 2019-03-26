@@ -37,7 +37,7 @@
            
         </ul>
         <ul class="topRight">
-            <li class="logining">[个人登录]</li>{{user}}
+            <li class="logining" @click="personLogin">[个人登录]</li>{{user}}
             <li to="" class="jinrong_a">
                     [企业登录]
             </li>
@@ -85,6 +85,9 @@ export default {
 
     },
     methods: {
+        personLogin(){
+            _czc.push(["_trackEvent", "个人登录", "点击", "个人登录弹窗", 1]);//友盟统计点击个人登录
+        },
          loginShow(){
              $(".logining").on('click',function(){
                 $(".masking").show();

@@ -165,6 +165,12 @@
           <img class="biging_licens" style="display:none;" src="@/assets/index/plate3_img.png" alt="">
           <img class="biging_licens" style="display:none;" src="@/assets/index/plate4_img.png" alt="">
         </div>
+        <div class="rule_list"> 
+          <p class="list_p" @click.stop='opentou'>投资人权益须知</p>
+          <!-- <p class="list_p" @click.stop='openfeng'>风险揭示函</p> -->
+          <p class="list_p" @click.stop='openjijin'>基金基础知识</p>
+          <p @click="jump_law">相关法律法规</p>
+        </div>
       </div>     
     </div> 
     <div  title="" class="chat"><img src="@/assets/index/chat.png" alt=""></div>            
@@ -199,6 +205,18 @@ export default {
     this.imgScola()  
   },
   methods: {
+    jump_law(){
+      this.$router.push({
+          path:'/Laws',
+          name:'Laws'
+      })
+    },
+    opentou(){
+      window.open("static/pdf/投资者权益须知pdf版.pdf",'_blank')
+    },
+    openjijin(){
+      window.open("static/pdf/基金投资知识.pdf",'_blank')
+    },
     getData:function(){
         let that = this;
         //console.log(that.pageNum)
@@ -581,7 +599,7 @@ transition: all .5s ease;
   padding 2%
   box-sizinig border-box
   background-color rgba(255,255,255,0.56)  
-  margin-bottom 50px
+  margin-bottom 70px
 .license_list
   .license_lists
     cursor pointer
@@ -633,7 +651,7 @@ transition: all .5s ease;
   background-position center center
   background-size cover
   //max-width 1920px
-  height 900px
+  height 925px
   margin 0 auto
 .title_index
   width 220px
@@ -651,4 +669,28 @@ transition: all .5s ease;
   float left
   height 20px
   line-height 20px
+.rule_list
+  overflow hidden
+  /* background-color rgba(255,255,255,0.56) */
+  padding 8px 15px
+  p
+    float left
+    font-size 16px
+    color #2A2A2A
+    position relative
+    width 33%
+    text-align center
+.rule_list p:hover
+  color #B09A7D
+  cursor pointer
+.rule_list .list_p::after
+  display block 
+  clear both
+  content ""
+  height 17px
+  position absolute
+  width 2px
+  background #D5D5D5
+  top 0
+  right 0
 </style>

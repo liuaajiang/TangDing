@@ -11,6 +11,7 @@ import Message from '@/components/Message'
 import messDetail from '@/components/Message/messDetail'
 import Information from '@/components/Information'
 import detail from '@/components/Information/detail'
+import Laws from '@/components/Laws'
 Vue.use(Router)
 
 export default new Router({
@@ -114,6 +115,14 @@ export default new Router({
         keepAlive: false // 不需要缓存
       },
       component:messDetail
+    },{
+      path:'/Laws',
+      name: 'Laws',
+      meta: {
+        title: '大唐财富旗下基金销售公司',
+        keepAlive: false // 不需要缓存
+      },
+      component:Laws
     }
   ]
 })

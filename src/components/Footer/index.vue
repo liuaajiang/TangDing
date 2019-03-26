@@ -20,7 +20,9 @@
         <a href="http://www.zrfunds.com.cn/index.html" style="color:#ffffff;" target="_blank">中融基金</a>
         <a href="http://www.icbccs.com.cn/cif/signin.jsp" style="border:0;color:#ffffff;" target="_blank">工银基金</a>     
       </p>
-      <p>北京唐鼎耀华基金销售有限公司 版权所有 CopyRight C 2014.All Rights Reserved 京ICP备14008122号</p>
+      <p class="F_p1">唐鼎耀华基金系证监会批准的基金销售机构[000000333]。唐鼎耀华网站所载文章、数据仅供参考，使用前请核实，风险自负。</p>
+      <p class="F_p2">中国证监会北京监管局网址：<a href="http://www.csrc.gov.cn/pub/beijing/" target="_blank">www.csrc.gov.cn/pub/beijing/</a></p>
+      
       <div class="erweima">
         <div class="dtcf">
           <img src="@/assets/index/dtcf.png" alt="">
@@ -32,6 +34,7 @@
         </div>
       </div> 
     </div>  
+    <div class="p_bottom"><p>北京唐鼎耀华基金销售有限公司 版权所有 CopyRight C 2014.All Rights Reserved 京ICP备14008122号</p></div>
   </div>
 </template>
 
@@ -132,5 +135,24 @@ ul {
     .dtcf_service
       float right
       img 
-        width 98%                
+        width 98%   
+.footer_content .F_p1
+  color #C5C5C5 
+  font-size 13px
+  line-height 18px   
+  padding-top 5px
+.footer_content .F_p2
+  color #C5C5C5 
+  font-size 13px
+  line-height 18px   
+  padding-top 5px   
+.footer_content .F_p2 a
+  color #C5C5C5 
+.p_bottom
+  background rgba(181,152,123,0.16)
+  height 60px
+  text-align center
+.p_bottom p
+  color #fff
+  line-height 60px
 </style>

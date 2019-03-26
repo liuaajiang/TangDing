@@ -48,7 +48,11 @@
                         </li>
                     </ul>
                 </div>
-                
+                <div class="branch">
+                    <p class="ours_text">分支机构</p>
+                    <p class="text_english">BRANCH</p>
+                    <p class="branch_list">北京唐鼎耀华基金销售有限公司湖州分公司</p>
+                </div>
             </div> 
             <div class="contact">
                 <div class="contact_content">
@@ -241,4 +245,10 @@ export default {
   z-index 9999
   img
     width 100%
+.branch
+    padding 45px 0 52px
+    .branch_list
+        padding: 31px 30px 30px 42px;
+        background-color rgba(176,154,125,0.24)
+        text-align center
 </style>

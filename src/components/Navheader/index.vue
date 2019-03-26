@@ -18,13 +18,14 @@
                 <!-- <router-link tag="li" to="/Information" class="navul_list" active-class="active">
                 收费资讯
                 </router-link> -->
+                <li class="navul_list" @click="enterJin()">企业金融</li>
                 <router-link tag="li" to="/ours" class="navul_list" active-class="active">
                   关于我们
                 </router-link>
             </ul>
-            <ul class="navul">
+            <!-- <ul class="navul">
                 <li class="navul_list" @click="enterJin()">企业金融</li>
-              </ul>
+              </ul> -->
             <ul class="navul">
                 <router-link tag="li" to="/Index" class="navul_list" active-class="active">
                      首页
