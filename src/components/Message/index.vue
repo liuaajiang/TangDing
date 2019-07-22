@@ -8,7 +8,7 @@
                     <p class="item_tit">{{item.F_TITLE}}</p>    
                 </div>
                 <p class="item_con item_con_M">{{item.F_CONTENT}}</p>
-                <p class="item_date" >{{dateinit(item.F_DATE)}}</p>
+                <p class="item_date" >{{item.F_DATE}}</p>
             </div>    
         </div>
         <div class="pagination">
@@ -97,7 +97,7 @@ export default {
           path:'/messDetail',
           name:'messDetail',
           query:{
-            contentId:this.inforList[index].F_INFO_ID,
+            contentId:this.inforList[index].F_FUND_ID,
             title:encodeURIComponent(this.inforList[index].F_TITLE),
             date: encodeURIComponent(this.inforList[index].F_DATE)
           }

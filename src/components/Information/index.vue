@@ -2,7 +2,8 @@
     <div class="index">
        <Navheader></Navheader>
         <div class="Mess_content">
-            <div class="mes_title">收费资讯 PROFESSIONAL INFORMATION</div>
+            <!-- <div class="mes_title">收费资讯 PROFESSIONAL INFORMATION</div> -->
+            <div class="mes_title">行业报告 INDUSTRY REPORT</div>
             <!-- <div class="trem_M" @click="jump_detail()">
                 <div class="trem_tit">
                     <img src="@/assets/index/shoufei.png" alt=""/>     
@@ -11,32 +12,36 @@
                 <p class="item_con">云计算已被提升至国家战略的层面、工信部发布规划明确提出：到2019年，我国云计算产业规模达到4300亿元。</p>
                 <p class="item_date">2018-11-02</p>
             </div> -->
-            <div class="trem_M" v-for="(item,index) in inforList" @click="jump_detail($event)" :index='index'>
-                    <div class="trem_tit">
+            <!-- <div class="trem_M" v-for="(item,index) in inforList" @click="jump_detail($event)" :index='index'> -->
+             <div class="trem_M" v-for="(item,index) in inforList" >
+                    <div class="trem_tit"  @click="openLogin">
                         <img src="@/assets/index/shoufei.png" alt=""/>     
                         <p class="item_tit">{{item.F_DATASOURCE}}</p>    
                     </div>
                 <p class="item_con item_con_M">{{item.F_CONTENT}}</p>
                 <p class="item_date">{{item.F_DATE}}</p>
             </div>
+           <!-- <p class="seemore"> <i class="el-icon-arrow-down"></i><span>查看更多</span></p> -->
+           <p class="see_btn" @click="openLogin">查看更多</p>
         </div>
     </div>
 </template>
 <script>
 import axios from 'axios'
 import Navheader from '@/components/Navheader'
+import { MessageBox } from 'element-ui';
 export default {
   name: 'Index',
   data () {
     return {
       msg: 'Welcome to Your  A1',
       inforList:[
-          {F_DATASOURCE: "拨开云雾，聊聊云计算", F_DATE: '2018-11-02',F_CONTENT: "云计算已被提升至国家战略的层面、工信部发布规划明确提出：到2019年，我国云计算产业规模达到4300亿元。说到云计算这种高大上的东西，很多人可能被吓到云里雾里，其实简单来看，我们可以把它类比成为酒店。从定义上来看，云计算是一种利用互联网实现随时随地、按需、便捷地使用共享计算设施、存储设备、应用程序资源的计算模式，代表了IT届的共享经济，就好像你有了一张VIP会员卡，可以…"},
-          {F_DATASOURCE: "私募资管行业的纲领性文件下发，A股会有最后一跌吗？", F_DATE: '2018-10-26',F_CONTENT: "说投资决策之前，先来解读一下私募行业的纲领性文件。22日晚间，证监会发布了《证券期货经营机构私募资产管理业务管理办法》及《证券期货经营机构私募资产管理计划运作管理规定》（以下合称《资管细则》），作为资管新规配套实施细则，自公布之日起施行。展业限制：",F_CONTENT2:"1、放宽私募资管展业条件，投资经理、投研人数均由5人降为3人；",F_CONTENT3:"2、明确了管理人的主动管理职责，彻底去通道化；",F_CONTENT4:"3、超额业绩报酬最高提60%，最多6个月提取一次，因赎回提取的不…"},
-          {F_DATASOURCE: "你买的银行理财变成这样了......", F_DATE: '2018-10-18',F_CONTENT: "作为资管行业中体量最大的一个子行业，银行理财5月份以来发行数量持续下降，很多新产品处于停摆状态。银行理财的收益率也连续六个月下跌，且创年内最大跌幅。8月份理财产品的平均预期收益率为4.67%，较7月份下降了0.08个百分点，是去年12月以来的最低收益水平。这也意味着老百姓的投资收益…"},
-          {F_DATASOURCE: "ODI、QDII、QDLP、QDIE，海外投资渠道全解读算", F_DATE: '2018-10-09',F_CONTENT: "当前特朗普向全球发难，世界资本市场格局生变，新兴市场货币贬值，美元升值，在这一升一贬间，人民币资产相对美元资产的吸引力也日渐式微，海外投资再成金融圈最热的话题。从配置层面看，国内投资者海外资产配置的比例相对较低，大概只有4-5%，因为我们还是一个资本管制的国家，发达市场家庭海外资产配置的比例在15%上下，某些国家甚至更高，比如新加坡，这一比例高达37%。过去15-20年财富等级的跃升主要靠房地产，未来15-20年不会…"},
-          {F_DATASOURCE: "银行理财新规落地，21万亿资产怎么办？", F_DATE: '2018-09-30',F_CONTENT: "自4月27日资管新规出台后，银行理财规模一路下滑。银保监会数据显示，2018年5月末银行理财产品余额为22.28万亿元，而6月末余额为21万亿元，同业理财规模和占比持续下降。7月20日，银保监会发布《商业银行理财业务监督管理办法(征求意见稿)》（以下简称“征求意见稿”）。经过两个月的征求意见，9月28日，《商业银行理财业务监督管理办法》正式落地，为银行理财续了一口真气…"},
-          {F_DATASOURCE: "大数据——私募证券基金市场扫描", F_DATE: '2018-09-29',F_CONTENT: "私募的业绩更新慢，所以9月底才能看全8月份的数据。 数据显示，8月份进入大唐财富白名单观察池中共68家，覆盖五大策略：股票多头/指数增强/中性策略/宏观对冲/量化CTA。2018年以来私募行业平均收益为-7.18%；大唐财富观察池中私募平均收益为-0.80%。8月份私募行业平均收益为-2.83%，除CTA策略、债券策略，本月其余策略均未获得正收益，大唐财富观察池中私募平均收益为…"}
+          {F_DATASOURCE: "券商的投资管理能力", F_DATE: '2019.03.27',F_CONTENT: "正如今年政府工作报告所强调的：“今年我国发展面临的环境更复杂更严峻，可以预料和难以预料的风险挑战更多更大，要做好打硬仗的充分准备。”在3月15日的国务院总理李克强回答中外记者提问新闻发布会上，李克强强调：“我们一定能够保持经济运行在合理区间。”"},
+          {F_DATASOURCE: "2019年券商的最新投研能力报告分析", F_DATE: '2019.03.26',F_CONTENT: "去年确实让很多人始料未及，不光小老百姓、资本小佬入了坑，大佬也同样入坑，你看贾跃亭把孙宏斌、王健林这样的顶级资本大佬也拉入了坑。有人说这是因为国人不理性、赌性大，很多人碰上了个姑娘就掏心掏肺、碰上了个项目就倾家荡产、碰上了个股票就梭哈。"},
+          {F_DATASOURCE: "在券商行业里，投资管理能力与投研能力的区别分析", F_DATE: '2019.03.22',F_CONTENT: "随着2019年全国两会结束，会上传出的一系列重磅政策开始陆续落地。除政府工作报告提出的实施更大规模的减税、确保减税降费等政策外，财政、货币政策的变化也备受市场关注..."},
+          //{F_DATASOURCE: "智能媒体时代来临，“多牛”有多牛？", F_DATE: '2019.03.08',F_CONTENT: "近几年，以技术驱动产业变革的力量开始波及传媒产业，在内容产业的生产、分发、变现等各个环节发生了彻底颠覆，在这个过程中，通过技术聚合了大量媒体资产的新型传媒产业开始出现。多牛传媒就是一个典型代表。提起多牛传媒，很多人会想到去年那场让无数8090后唏嘘不已的人人网并购。"},
+          //{F_DATASOURCE: "大唐元一乐德芳：2019，你必须要配置一款股权母基金", F_DATE: '2019.02.21',F_CONTENT: "2019.2.20，雪后放晴，北京千禧大酒店，知名行业媒体“GPLP”的第三届投资产业峰会正在召开。大唐财富大唐元一股权母基金管理合伙人乐德芳女士从容登台，她是这场“2019年投资策略”panel的主持人，在座的都是行业内的知名大咖，每个人谈起自家基金来都是信心满满，骄傲满满。乐德芳则穿针引线，巧妙的在不断抛出问题的同时，也娓娓道来了她的骄傲——大唐元一。"},
+         // {F_DATASOURCE: "1月CPI数据出炉，万亿春节消费凸显新亮点", F_DATE: '2019.02.15',F_CONTENT: "其中，从环比看，CPI上涨0.5%，主要受到了春节节日因素影响。在食品中，受天气寒冷和临近春节等因素影响，鲜菜、鲜果和水产品价格分别上涨9.1%、2.3%和2.0%；羊肉、牛肉和鸡蛋价格分别上涨1.8%、1.7%和0.5%，上述六项合计影响CPI上涨约0.32个百分点。"}
         ]
     }
   },
@@ -45,7 +50,43 @@ export default {
     //this.changeCai() 
     //this.enterJin()     
   },
-  methods: {    
+  methods: {   
+    openLogin (){
+        const h = this.$createElement;
+        this.$msgbox({
+          title: '登录',
+          message: h('div', null, [
+            h('span', null, '用户名 '),
+            h('input', { style: 'color: #666',class:'span_inp' }),
+            h('span', { style: 'padding-right: 13px',class:'span_p'}, '密码 '),
+            h('input', { style: 'margin-bottom: 13px',class:'span_inp' }),
+            h('p', { style: 'margin-top: 15px' ,class:'p_l'}, '行业报告需付费观看，会员/月10元 '),
+          ]),
+          showCancelButton: true,
+          showConfirmButton: false,
+          confirmButtonText: '登录',
+          cancelButtonText: '登录',
+          beforeClose: (action, instance, done) => {
+            if (action === 'confirm') {
+              instance.confirmButtonLoading = true;
+              instance.confirmButtonText = '执行中...';
+              setTimeout(() => {
+                done();
+                setTimeout(() => {
+                  instance.confirmButtonLoading = false;
+                }, 300);
+              }, 3000);
+            } else {
+              done();
+            }
+          }
+        }).then(action => {
+          this.$message({
+            type: 'info',
+            message: 'action: ' + action
+          });
+        });
+    },
     changeCai (){
       $(".caifu_lists").hover(function(){
           $(this).find(".lists_title").hide();
@@ -93,6 +134,34 @@ export default {
 }
 </script>
 <style scoped lang="stylus">
+.Mess_content .seemore{
+  color: rgb(176, 154, 125);
+  text-align: center;
+  cursor: pointer;
+}
+.see_btn
+    width 160px
+    height 40px
+    line-height 40px
+    border 1px solid #b09a7d
+    margin 50px auto 30px
+    color #333
+    border-radius 40px
+    text-align center
+    font-size 14px
+.see_btn:hover
+    cursor pointer
+.span_inp{
+  width: 85%;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  margin-top: 23px;
+  padding: 8px 0;
+  color: #666
+}
+.p_l{
+  opacity: 0.5;
+}
 #zhichiBtnBox{
     display: none;
 }

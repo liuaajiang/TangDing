@@ -2,7 +2,7 @@
     <div class="index">
         <Navheader></Navheader>
         <div class="Mess_content">
-            <div class="mes_title clearfloat"><p class="M_tit">{{title}}</p><p class="M_date">{{dateinit(date)}}</p></div>
+            <div class="mes_title clearfloat"><p class="M_tit">{{title}}</p><p class="M_date">{{date}}</p></div>
             <div class="trem_M">
                 <p class="item_con">{{content}}</p>
             </div>
@@ -56,7 +56,8 @@ export default {
       // console.log(that.pageNum)
         axios({
             method:'get',
-            url:'https://funddata.tdyhfund.com/fundDataManage/fundInfo/NoticeContent/123456',
+           // url:'https://funddata.tdyhfund.com/fundDataManage/fundInfo/NoticeContent/123456',
+            url:'https://funddata.tdyhfund.com/fundDataManage/fundInfo/NoticeContent',//07-18
             params: {
                 contentId: that.infoId
             }

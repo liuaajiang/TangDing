@@ -16,12 +16,14 @@
          
             <ul class="navul">
                 <!-- <router-link tag="li" to="/Information" class="navul_list" active-class="active">
-                收费资讯
+                行业报告
                 </router-link> -->
                 <li class="navul_list" @click="enterJin()">企业金融</li>
                 <router-link tag="li" to="/ours" class="navul_list" active-class="active">
                   关于我们
                 </router-link>
+                <!-- <li class="navul_list" @click="open_login()">登录</li>
+                <li class="navul_list" @click="open_reg()">注册</li> -->
             </ul>
             <!-- <ul class="navul">
                 <li class="navul_list" @click="enterJin()">企业金融</li>
@@ -56,8 +58,8 @@
         </div>
     </div>
 </template>
-
 <script>
+import { MessageBox } from 'element-ui';
 export default {
   data () {
     return {
@@ -65,6 +67,78 @@ export default {
     }
   },
   methods: {
+    open_login() {
+      const h = this.$createElement;
+        this.$msgbox({
+          title: '登录',
+          message: h('div', null, [
+            h('span', null, '用户名 '),
+            h('input', { style: 'color: #666',class:'span_inp' }),
+            h('span', { style: 'padding-right: 13px',class:'span_p'}, '密码 '),
+            h('input', { style: 'margin-bottom: 13px',class:'span_inp' }),
+            h('p', { style: 'margin-top: 15px' ,class:'p_l'}, '行业报告需付费观看，会员/月10元 '),
+          ]),
+          showCancelButton: true,
+          showConfirmButton: false,
+          confirmButtonText: '登录',
+          cancelButtonText: '登录',
+          beforeClose: (action, instance, done) => {
+            if (action === 'confirm') {
+              instance.confirmButtonLoading = true;
+              instance.confirmButtonText = '执行中...';
+              setTimeout(() => {
+                done();
+                setTimeout(() => {
+                  instance.confirmButtonLoading = false;
+                }, 300);
+              }, 3000);
+            } else {
+              done();
+            }
+          }
+        }).then(action => {
+          this.$message({
+            type: 'info',
+            message: 'action: ' + action
+          });
+        });
+      },
+      open_reg() {
+      const h = this.$createElement;
+        this.$msgbox({
+          title: '注册',
+          message: h('div', null, [
+            h('span', null, '用户名 '),
+            h('input', { style: 'color: #666',class:'span_inp' }),
+            h('span', { style: 'padding-right: 13px',class:'span_p'}, '密码 '),
+            h('input', { style: 'margin-bottom: 13px',class:'span_inp' }),
+            //h('p', { style: 'margin-top: 15px' ,class:'p_l'}, '行业报告需付费观看，会员/月10元 '),
+          ]),
+          showCancelButton: true,
+          showConfirmButton: false,
+          confirmButtonText: '注册',
+          cancelButtonText: '注册',
+          beforeClose: (action, instance, done) => {
+            if (action === 'confirm') {
+              instance.confirmButtonLoading = true;
+              instance.confirmButtonText = '执行中...';
+              setTimeout(() => {
+                done();
+                setTimeout(() => {
+                  instance.confirmButtonLoading = false;
+                }, 300);
+              }, 3000);
+            } else {
+              done();
+            }
+          }
+        }).then(action => {
+          this.$message({
+            type: 'info',
+            message: 'action: ' + action
+          });
+        });
+      },
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
       this.$router.push(keyPath)
@@ -114,7 +188,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
-
+.span_inp{
+  width: 85%;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  margin-top: 23px;
+  padding: 8px 0;
+  color: #666;
+}
+.p_l{
+  opacity: 0.5;
+}
 .bannering
     width 100%
     background rgba(0,0,0,1)   

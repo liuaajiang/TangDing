@@ -12,7 +12,7 @@
           <div class="grid-content bg-purple-light">
             <el-row >
               <el-col :span="12" v-for="(item,index) in messageList" :key="index">
-              <div class="grid-content bg-purple"><span class="title_index">{{item.F_TITLE}}</span><span style="float:left">{{dateInit(item.F_DATE)}}</span></div>
+              <div class="grid-content bg-purple"><span class="title_index">{{item.F_TITLE}}</span><span style="float:left">{{item.F_DATE}}</span></div>
               </el-col>
             </el-row>
           </div></el-col>
