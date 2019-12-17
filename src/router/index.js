@@ -12,10 +12,11 @@ import messDetail from '@/components/Message/messDetail'
 import Information from '@/components/Information'
 import detail from '@/components/Information/detail'
 import Laws from '@/components/Laws'
+import NotFound from '@/components/NotFound'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+   mode: 'history',
   // base: '/dist/',             //添加根目录
   // 	scrollBehavior: () => ({ y: 0 }),
   routes: [
@@ -123,6 +124,7 @@ export default new Router({
         keepAlive: false // 不需要缓存
       },
       component:Laws
-    }
+    },
+   { path: '*', component: NotFound }
   ]
 })

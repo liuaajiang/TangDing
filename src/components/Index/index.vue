@@ -149,8 +149,9 @@
                 <div class="line"></div>
               </div>
             </li>
-            <li class="license_lists">
-              <img src="@/assets/index/plate4_img.png" alt="" class="lic_img">
+            <li class="license_lists jianguan">
+              <img src="@/assets/index/plate4_img.png" alt="" class="lic_img4">
+              <img src="@/assets/index/plate4@2x.png" alt="" class="lic_img5">
               <div>
                 <p class="license_text">民生银行全程资金监管</p>
                 <div class="line"></div>
@@ -279,6 +280,19 @@ export default {
             width:190,height:120,left:0,top:0
           })   
           $(".lic_img3").hide()   
+        });
+        $(".jianguan").hover(function(){   
+          $(".lic_img5").show() 
+          $(".lic_img5").css({
+            width:410,height:580,left:-100,top:-200
+          })             
+          $(".lic_img4").hide()   
+        },function(){
+          $(".lic_img4").show() 
+          $(".lic_img5").css({
+            width:190,height:120,left:0,top:0
+          })   
+          $(".lic_img5").hide()   
         });      
      },   
      changeTable (){     
@@ -346,16 +360,17 @@ width:100%;
   position: relative;
 }
 .license_lists img{
-
-transition: all .5s ease;
+  transition: all .5s ease;
+  -moz-transition: all .5s ease; /* Firefox 4 */
+  -webkit-transition: all .5s ease;
 } 
 .license_lists:hover .lic_img{
   transform: scale(3.5);
   z-index:99999;
   position: absolute;
 }
-.lic_img3{
- display: none;
+.lic_img3,.lic_img5{
+  display: none;
   z-index: 99999;
   position: absolute;  
 }
