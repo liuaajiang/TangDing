@@ -9,9 +9,12 @@ import router from './router'
 import "babel-polyfill"
 import store from './vuex/store'
 import $ from 'jquery'
+let Base64 = require('js-base64').Base64
+import utils from '../static/js/utils.js'  
 
 Vue.config.productionTip = false
 Vue.use(ElementUI);
+Vue.use(utils);//使用方法
 /* eslint-disable no-new */
 router.beforeEach((to, from, next) => {
   /* 路由发生变化修改页面title */

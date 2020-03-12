@@ -170,7 +170,8 @@
           <p class="list_p" @click.stop='opentou'>投资人权益须知</p>
           <!-- <p class="list_p" @click.stop='openfeng'>风险揭示函</p> -->
           <p class="list_p" @click.stop='openjijin'>基金基础知识</p>
-          <p @click="jump_law">相关法律法规</p>
+          <p class="list_p" @click="jump_law">相关法律法规</p>
+          <p @click="jump_investor">投资者教育</p>
         </div>
       </div>     
     </div> 
@@ -210,6 +211,12 @@ export default {
       this.$router.push({
           path:'/Laws',
           name:'Laws'
+      })
+    },
+    jump_investor(){
+      this.$router.push({
+          path:'/InvestorEduc',
+          name:'InvestorEduc'
       })
     },
     opentou(){
@@ -693,7 +700,7 @@ width:100%;
     font-size 16px
     color #2A2A2A
     position relative
-    width 33%
+    width 25%
     text-align center
 .rule_list p:hover
   color #B09A7D

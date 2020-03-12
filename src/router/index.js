@@ -13,6 +13,8 @@ import Information from '@/components/Information'
 import detail from '@/components/Information/detail'
 import Laws from '@/components/Laws'
 import NotFound from '@/components/NotFound'
+import InvestorEduc from '@/components/InvestorEduc'//投资者教育列表
+import InvestorDetail from '@/components/InvestorEduc/InvestorDetail'//投资者教育详情
 Vue.use(Router)
 
 export default new Router({
@@ -124,6 +126,22 @@ export default new Router({
         keepAlive: false // 不需要缓存
       },
       component:Laws
+    },{
+      path:'/InvestorEduc',
+      name: 'InvestorEduc',
+      meta: {
+        title: '大唐财富旗下基金销售公司',
+        keepAlive: false // 不需要缓存
+      },
+      component:InvestorEduc
+    },{
+      path:'/InvestorDetail',
+      name: 'InvestorDetail',
+      meta: {
+        title: '大唐财富旗下基金销售公司',
+        keepAlive: false // 不需要缓存
+      },
+      component:InvestorDetail
     },
    { path: '*', component: NotFound }
   ]

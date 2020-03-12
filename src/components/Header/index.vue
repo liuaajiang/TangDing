@@ -102,7 +102,7 @@ export default {
         },
         jinRong(){
             $(".jinrong_a").on('click',function(){
-                window.open("https://jg.tdyhfund.com/",'_blank');
+                window.open("https://jg.tdyhfund.com/CompanyLogin",'_blank');
             })
         },
        

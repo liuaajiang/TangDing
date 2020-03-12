@@ -180,7 +180,7 @@ export default {
       })
     },
     enterJin (){
-      window.open("https://jg.tdyhfund.com/",'_blank');
+      window.open("https://jg.tdyhfund.com",'_blank');
     }
   }      
 }
