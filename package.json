@@ -13,7 +13,7 @@
     "axios": "^0.18.1",
     "element-ui": "^2.4.7",
     "js-base64": "^2.5.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "mixin-deep": "^2.0.1",
     "normalize.css": "^8.0.0",
     "set-value": "^3.0.1",
